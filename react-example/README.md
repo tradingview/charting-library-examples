@@ -3,12 +3,12 @@
 ## How to start
 
 1. Install dependencies `npm install`.
-1. Copy Charting Library to the project: copy `charting_library` folder from https://github.com/tradingview/charting_library/ to `/public`.
-1. Execute `npm start`. It will build the project and open a default browser with the charting library.
+1. Copy the Charting Library to this project: copy `charting_library` folder from https://github.com/tradingview/charting_library/ to `/public`. The earliest supported version of the Charting Library is 1.12.
+1. Execute `npm start`. It will build the project and open a default browser with the Charting Library.
 
 ## What is Charting Library
 
-Charting Library is a standalone solution for displaying trading charts that you download, host on your servers, connect your own data & use in your site/app for free. [Learn more and download](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
+The Charting Library is a standalone solution for displaying trading charts that you download, host on your servers, connect your own data & use in your site/app for free. [Learn more and download](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
 
 ## What is React
 
