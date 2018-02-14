@@ -8,18 +8,16 @@ import {
 	AccessList,
 	LanguageCode,
 	NumericFormattingParams,
-	TimeFrame,
 	Timezone,
 	AvailableSaveloadVersions,
 	StudyOverrides,
 	CustomFormatters,
 	Overrides,
-	TimeFrameItem,
 	Favorites,
 	IExternalSaveLoadAdapter,
 	LoadingScreenOptions,
 	ISettingsAdapter
-} from '../../../public/charting-library/charting_library.min';
+} from '../../../public/charting_library/charting_library.min';
 
 export interface ChartContainerProps {
 	symbol?: string;
@@ -42,7 +40,6 @@ export interface ChartContainerProps {
 	studiesAccess?: AccessList;
 	studyCountLimit?: number;
 	symbolSearchRequestDelay?: number;
-	timeframe?: TimeFrame;
 	timezone?: 'exchange' | Timezone;
 	toolbarBg?: string;
 	width?: number;
@@ -57,7 +54,6 @@ export interface ChartContainerProps {
 	snapshotUrl?: string;
 	indicatorsFileName?: string;
 	preset?: 'mobile';
-	timeFrames?: TimeFrameItem[];
 	customCssUrl?: string;
 	favorites?: Favorites;
 	saveLoadAdapter?: IExternalSaveLoadAdapter;
@@ -81,7 +77,7 @@ export class TVChartContainer extends React.PureComponent<ChartContainerProps, C
 		interval: 'D',
 		containerId: 'tv_chart_container',
 		datafeedUrl: 'https://demo_feed.tradingview.com',
-		libraryPath: 'charting-library/',
+		libraryPath: 'charting_library/',
 		chartsStorageUrl: 'http://saveload.tradingview.com',
 		chartsStorageApiVersion: '1.1',
 		clientId: 'tradingview.com',

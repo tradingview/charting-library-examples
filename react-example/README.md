@@ -3,7 +3,8 @@
 ## How to start
 
 1. Install dependencies `npm install`.
-1. Copy the Charting Library to this project: copy `charting_library` folder from https://github.com/tradingview/charting_library/ to `/public`. The earliest supported version of the Charting Library is 1.12.
+1. Copy `charting_library` folder from https://github.com/tradingview/charting_library/ to `/public`. The earliest supported version of the Charting Library is 1.12.
+1. Copy `datafeeds` folder from https://github.com/tradingview/charting_library/ to `/public`.
 1. Execute `npm start`. It will build the project and open a default browser with the Charting Library.
 
 ## What is Charting Library
