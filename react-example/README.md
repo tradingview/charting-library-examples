@@ -9,7 +9,7 @@
 
 ## What is Charting Library
 
-The Charting Library is a standalone solution for displaying trading charts that you download, host on your servers, connect your own data & use in your site/app for free. [Learn more and download](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
+Charting Library is a standalone solution for displaying charts. This free, downloadable library is hosted on your servers and is connected to your data feed to be used in your website or app. Learn more and download. [Learn more and download](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
 
 ## What is React
 
