@@ -1,0 +1,46 @@
+// Place all the styles related to the Library controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+.page-logo-container {
+	padding-bottom: 29px;
+	text-align: center;
+	background-color: #222; 
+}
+
+.page-rails-logo-container {
+	display: inline-block;
+}
+
+.page-rails-logo {
+	display: block;
+	border: 0;
+	width: 151px;
+	height: 151px;
+}
+
+.page-tv-logo-container {
+	display: inline-block;
+}
+
+.page-tv-logo {
+	display: block;
+	border: 0;
+}
+
+.page-header {
+	box-sizing: border-box;
+	margin: 15px 0 0;
+	text-align: center;
+	font-size: 1.5em;
+	color: #fff;
+}
+
+.page-tv-chart-container {
+	height: calc(100vh - 227px);
+}
