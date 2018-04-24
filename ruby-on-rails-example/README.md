@@ -6,7 +6,7 @@ TradingView Charting Library and Ruby on Rails Integration Example.
 
 1. Install Ruby on Rails. This project uses 5.2.0 version.
 
-1. Copy `charting_library` folder from https://github.com/tradingview/charting_library/ to `/vendor/assets/javascripts`. The earliest supported version of the Charting Library is 1.12. If you get 404 then you need to request an access to this repository.
+1. Copy `charting_library` folder from https://github.com/tradingview/charting_library/ to `/vendor/assets/javascripts`. The earliest supported version of the Charting Library is 1.12. If you get 404 then you need to [request an access to this repository](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
 
 1. Copy `datafeeds` folder from https://github.com/tradingview/charting_library/ to `/vendor/assets/javascripts`.
 
