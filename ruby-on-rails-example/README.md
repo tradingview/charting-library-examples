@@ -19,4 +19,4 @@ Charting Library is a standalone solution for displaying charts. This free, down
 
 ## What is Ruby on Rails
 
-A web-application framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC) pattern. Ruby on Rails is open source software and there are many of the applications that were built with Ruby on Rails such as Basecamp, GitHub, Shopify, Airbnb, Twitch, SoundCloud, Hulu, Zendesk, Square, Highrise, Cookpad. [Learn more](http://rubyonrails.org/)
+A web-application framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC) pattern. Ruby on Rails is open source software and there are many of the applications that were built with Ruby on Rails such as Basecamp, GitHub, Shopify, Airbnb, Twitch, SoundCloud, Hulu, Zendesk, Square, Highrise, Cookpad. [Learn more](http://rubyonrails.org/).
