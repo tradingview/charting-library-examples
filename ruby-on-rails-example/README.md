@@ -15,7 +15,7 @@ TradingView Charting Library and Ruby on Rails Integration Example.
 
 ## What is Charting Library
 
-Charting Library is a standalone solution for displaying charts. This free, downloadable library is hosted on your servers and is connected to your data feed to be used in your website or app. Learn more and download. [Learn more and download](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
+Charting Library is a standalone solution for displaying charts. This free, downloadable library is hosted on your servers and is connected to your data feed to be used in your website or app. [Learn more and download](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
 
 ## What is Ruby on Rails
 
