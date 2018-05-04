@@ -6,7 +6,11 @@ Charting Library is a standalone solution for displaying charts. This free, down
 
 ## Content
 
-### react-example
+### react-typescript-example
+
+TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/), [React](https://reactjs.org) and [TypeScript](https://www.typescriptlang.org/) Integration Example
+
+### react-javascript-example
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [React](https://reactjs.org) Integration Example
 
