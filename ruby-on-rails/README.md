@@ -1,4 +1,4 @@
-TradingView Charting Library and Ruby on Rails Integration Example.
+# TradingView Charting Library and Ruby on Rails Integration Example.
 
 ## How to start
 
