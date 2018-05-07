@@ -1,9 +1,11 @@
 import * as React from 'react';
 import './index.css';
 import {
+	widget,
+	onready,
 	ChartingLibraryWidgetOptions,
 	LanguageCode,
-} from '../../../public/charting_library/charting_library.min';
+} from '../../charting_library/charting_library.min';
 
 export interface ChartContainerProps {
 	symbol: ChartingLibraryWidgetOptions['symbol'];
@@ -69,16 +71,14 @@ export class TVChartContainer extends React.PureComponent<Partial<ChartContainer
 			studies_overrides: this.props.studiesOverrides,
 		};
 
-		// tslint:disable-next-line:no-any
-		(window as any).TradingView.onready(() => {
-			// tslint:disable-next-line:no-any
-			const widget = (window as any).tvWidget = new (window as any).TradingView.widget(widgetOptions);
+		onready(() => {
+			const tvWidget = new widget(widgetOptions);
 
-			widget.onChartReady(() => {
-				const button = widget.createButton()
+			tvWidget.onChartReady(() => {
+				const button = tvWidget.createButton()
 					.attr('title', 'Click to show a notification popup')
 					.addClass('apply-common-tooltip')
-					.on('click', () => widget.showNoticeDialog({
+					.on('click', () => tvWidget.showNoticeDialog({
 						title: 'Notification',
 						body: 'TradingView Charting Library API works correctly',
 						callback: () => {
