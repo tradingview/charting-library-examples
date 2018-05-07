@@ -9,6 +9,6 @@ describe('charting-library-angular5 App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('TradingView Charting Library and Angular 5 Integration Example');
+    expect(page.getHeadingText()).toEqual('TradingView Charting Library and Angular 5 Integration Example');
   });
 });

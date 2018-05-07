@@ -1,5 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { AppHeaderComponent } from './app-header/app-header.component';
 import { TvChartContainerComponent } from './tv-chart-container/tv-chart-container.component';
 
 describe('AppComponent', () => {
@@ -7,6 +8,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
+        AppHeaderComponent,
         TvChartContainerComponent
       ],
     }).compileComponents();
@@ -16,11 +18,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  }));
-
-  it(`should have as title 'TradingView Charting Library and Angular 5 Integration Example'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('TradingView Charting Library and Angular 5 Integration Example');
   }));
 });

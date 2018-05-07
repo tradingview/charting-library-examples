@@ -1,0 +1,12 @@
+.app-header-container {
+	padding: 10px;
+	text-align: center;
+	background-color: #222; 
+}
+
+.app-header {
+	box-sizing: border-box;	
+	text-align: center;
+	font-size: 1.5em;
+	color: #fff;
+}
