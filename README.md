@@ -21,3 +21,7 @@ TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bit
 ### ruby-on-rails
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Ruby-on-Rails](http://rubyonrails.org/) Integration Example
+
+### vuejs
+
+TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Vue.js](https://vuejs.org/) Integration Example
