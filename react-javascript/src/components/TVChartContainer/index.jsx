@@ -24,6 +24,8 @@ export class TVChartContainer extends React.PureComponent {
 		studiesOverrides: {},
 	};
 
+	tvWidget = null;
+
 	componentDidMount() {
 		const widgetOptions = {
 			symbol: this.props.symbol,
@@ -46,6 +48,7 @@ export class TVChartContainer extends React.PureComponent {
 		};
 
 		const tvWidget = new widget(widgetOptions);
+		this.tvWidget = tvWidget;
 
 		tvWidget.onChartReady(() => {
 			const button = tvWidget.createButton()
@@ -61,6 +64,13 @@ export class TVChartContainer extends React.PureComponent {
 
 			button[0].innerHTML = 'Check API';
 		});
+	}
+
+	componentWillUnmount() {
+		if (this.tvWidget !== null) {
+			this.tvWidget.remove();
+			this.tvWidget = null;
+		}
 	}
 
 	render() {
