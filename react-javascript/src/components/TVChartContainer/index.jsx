@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './index.css';
+import { widget } from '../../charting_library/charting_library.min';
 
 function getLanguageFromURL() {
 	const regex = new RegExp('[\\?&]lang=([^&#]*)');
@@ -44,13 +45,13 @@ export class TVChartContainer extends React.PureComponent {
 			studies_overrides: this.props.studiesOverrides,
 		};
 
-		const widget = new window.TradingView.widget(widgetOptions);
+		const tvWidget = new widget(widgetOptions);
 
-		widget.onChartReady(() => {
-			const button = widget.createButton()
+		tvWidget.onChartReady(() => {
+			const button = tvWidget.createButton()
 				.attr('title', 'Click to show a notification popup')
 				.addClass('apply-common-tooltip')
-				.on('click', () => widget.showNoticeDialog({
+				.on('click', () => tvWidget.showNoticeDialog({
 					title: 'Notification',
 					body: 'TradingView Charting Library API works correctly',
 					callback: () => {
