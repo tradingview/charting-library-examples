@@ -44,23 +44,21 @@ export class TVChartContainer extends React.PureComponent {
 			studies_overrides: this.props.studiesOverrides,
 		};
 
-		window.TradingView.onready(() => {
-			const widget = window.tvWidget = new window.TradingView.widget(widgetOptions);
+		const widget = new window.TradingView.widget(widgetOptions);
 
-			widget.onChartReady(() => {
-				const button = widget.createButton()
-					.attr('title', 'Click to show a notification popup')
-					.addClass('apply-common-tooltip')
-					.on('click', () => widget.showNoticeDialog({
-						title: 'Notification',
-						body: 'TradingView Charting Library API works correctly',
-						callback: () => {
-							console.log('Noticed!');
-						},
-					}));
+		widget.onChartReady(() => {
+			const button = widget.createButton()
+				.attr('title', 'Click to show a notification popup')
+				.addClass('apply-common-tooltip')
+				.on('click', () => widget.showNoticeDialog({
+					title: 'Notification',
+					body: 'TradingView Charting Library API works correctly',
+					callback: () => {
+						console.log('Noticed!');
+					},
+				}));
 
-				button[0].innerHTML = 'Check API';
-			});
+			button[0].innerHTML = 'Check API';
 		});
 	}
 
