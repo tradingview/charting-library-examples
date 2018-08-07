@@ -4,6 +4,7 @@ import {
 	widget,
 	ChartingLibraryWidgetOptions,
 	LanguageCode,
+	IChartingLibraryWidget,
 } from '../../charting_library/charting_library.min';
 
 export interface ChartContainerProps {
@@ -48,6 +49,8 @@ export class TVChartContainer extends React.PureComponent<Partial<ChartContainer
 		studiesOverrides: {},
 	};
 
+	private tvWidget: IChartingLibraryWidget | null = null;
+
 	public componentDidMount(): void {
 		const widgetOptions: ChartingLibraryWidgetOptions = {
 			symbol: this.props.symbol as string,
@@ -71,6 +74,7 @@ export class TVChartContainer extends React.PureComponent<Partial<ChartContainer
 		};
 
 		const tvWidget = new widget(widgetOptions);
+		this.tvWidget = tvWidget;
 
 		tvWidget.onChartReady(() => {
 			const button = tvWidget.createButton()
@@ -86,6 +90,13 @@ export class TVChartContainer extends React.PureComponent<Partial<ChartContainer
 
 			button[0].innerHTML = 'Check API';
 		});
+	}
+
+	public componentWillUnmount(): void {
+		if (this.tvWidget !== null) {
+			this.tvWidget.remove();
+			this.tvWidget = null;
+		}
 	}
 
 	public render(): JSX.Element {
