@@ -2,8 +2,8 @@
 <div class="app">
   <header class="app__header">
     <h1 class="app__title">
-        TradingView Charting Library and Vue.js Integration Example
-      </h1>
+      TradingView Charting Library and Vue.js Integration Example
+    </h1>
   </header>
   <TVChartContainer />
 </div>

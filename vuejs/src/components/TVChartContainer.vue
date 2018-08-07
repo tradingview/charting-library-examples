@@ -84,7 +84,7 @@ export default {
       studies_overrides: this.studiesOverrides,
     };
 
-    const tvWidget = window.tvWidget = new widget(widgetOptions);
+    const tvWidget = new widget(widgetOptions);
 
     tvWidget.onChartReady(() => {
       const button = tvWidget.createButton()
