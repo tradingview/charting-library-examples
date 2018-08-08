@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './index.css';
+import { widget } from '../../charting_library/charting_library.min';
 
 function getLanguageFromURL() {
 	const regex = new RegExp('[\\?&]lang=([^&#]*)');
@@ -23,6 +24,8 @@ export class TVChartContainer extends React.PureComponent {
 		studiesOverrides: {},
 	};
 
+	tvWidget = null;
+
 	componentDidMount() {
 		const widgetOptions = {
 			symbol: this.props.symbol,
@@ -44,24 +47,30 @@ export class TVChartContainer extends React.PureComponent {
 			studies_overrides: this.props.studiesOverrides,
 		};
 
-		window.TradingView.onready(() => {
-			const widget = window.tvWidget = new window.TradingView.widget(widgetOptions);
+		const tvWidget = new widget(widgetOptions);
+		this.tvWidget = tvWidget;
 
-			widget.onChartReady(() => {
-				const button = widget.createButton()
-					.attr('title', 'Click to show a notification popup')
-					.addClass('apply-common-tooltip')
-					.on('click', () => widget.showNoticeDialog({
-						title: 'Notification',
-						body: 'TradingView Charting Library API works correctly',
-						callback: () => {
-							console.log('Noticed!');
-						},
-					}));
+		tvWidget.onChartReady(() => {
+			const button = tvWidget.createButton()
+				.attr('title', 'Click to show a notification popup')
+				.addClass('apply-common-tooltip')
+				.on('click', () => tvWidget.showNoticeDialog({
+					title: 'Notification',
+					body: 'TradingView Charting Library API works correctly',
+					callback: () => {
+						console.log('Noticed!');
+					},
+				}));
 
-				button[0].innerHTML = 'Check API';
-			});
+			button[0].innerHTML = 'Check API';
 		});
+	}
+
+	componentWillUnmount() {
+		if (this.tvWidget !== null) {
+			this.tvWidget.remove();
+			this.tvWidget = null;
+		}
 	}
 
 	render() {
