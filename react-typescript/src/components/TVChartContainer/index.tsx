@@ -2,9 +2,9 @@ import * as React from 'react';
 import './index.css';
 import {
 	widget,
-	onready,
 	ChartingLibraryWidgetOptions,
 	LanguageCode,
+	IChartingLibraryWidget,
 } from '../../charting_library/charting_library.min';
 
 export interface ChartContainerProps {
@@ -49,6 +49,8 @@ export class TVChartContainer extends React.PureComponent<Partial<ChartContainer
 		studiesOverrides: {},
 	};
 
+	private tvWidget: IChartingLibraryWidget | null = null;
+
 	public componentDidMount(): void {
 		const widgetOptions: ChartingLibraryWidgetOptions = {
 			symbol: this.props.symbol as string,
@@ -71,24 +73,30 @@ export class TVChartContainer extends React.PureComponent<Partial<ChartContainer
 			studies_overrides: this.props.studiesOverrides,
 		};
 
-		onready(() => {
-			const tvWidget = new widget(widgetOptions);
+		const tvWidget = new widget(widgetOptions);
+		this.tvWidget = tvWidget;
 
-			tvWidget.onChartReady(() => {
-				const button = tvWidget.createButton()
-					.attr('title', 'Click to show a notification popup')
-					.addClass('apply-common-tooltip')
-					.on('click', () => tvWidget.showNoticeDialog({
-						title: 'Notification',
-						body: 'TradingView Charting Library API works correctly',
-						callback: () => {
-							console.log('Noticed!');
-						},
-					}));
+		tvWidget.onChartReady(() => {
+			const button = tvWidget.createButton()
+				.attr('title', 'Click to show a notification popup')
+				.addClass('apply-common-tooltip')
+				.on('click', () => tvWidget.showNoticeDialog({
+					title: 'Notification',
+					body: 'TradingView Charting Library API works correctly',
+					callback: () => {
+						console.log('Noticed!');
+					},
+				}));
 
-				button[0].innerHTML = 'Check API';
-			});
+			button[0].innerHTML = 'Check API';
 		});
+	}
+
+	public componentWillUnmount(): void {
+		if (this.tvWidget !== null) {
+			this.tvWidget.remove();
+			this.tvWidget = null;
+		}
 	}
 
 	public render(): JSX.Element {
