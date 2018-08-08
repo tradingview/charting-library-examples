@@ -4,10 +4,7 @@
 
 <script>
 
-import {
-	widget,
-	onready
-} from '../charting_library.min'; 
+import { widget } from '../charting_library.min';
 
 function getLanguageFromURL() {
   const regex = new RegExp('[\\?&]lang=([^&#]*)');
@@ -87,24 +84,22 @@ export default {
       studies_overrides: this.studiesOverrides,
     };
 
-    onready(() => {
-      const tvWidget = window.tvWidget = new widget(widgetOptions);
+    const tvWidget = new widget(widgetOptions);
 
-      tvWidget.onChartReady(() => {
-        const button = tvWidget.createButton()
-          .attr('title', 'Click to show a notification popup')
-          .addClass('apply-common-tooltip')
-          .on('click', () => tvWidget.showNoticeDialog({
-            title: 'Notification',
-            body: 'TradingView Charting Library API works correctly',
-            callback: () => {
-              // eslint-disable-next-line no-console
-              console.log('Noticed!');
-            },
-          }));
+    tvWidget.onChartReady(() => {
+      const button = tvWidget.createButton()
+        .attr('title', 'Click to show a notification popup')
+        .addClass('apply-common-tooltip')
+        .on('click', () => tvWidget.showNoticeDialog({
+          title: 'Notification',
+          body: 'TradingView Charting Library API works correctly',
+          callback: () => {
+            // eslint-disable-next-line no-console
+            console.log('Noticed!');
+          },
+        }));
 
-        button[0].innerHTML = 'Check API';
-      });
+      button[0].innerHTML = 'Check API';
     });
   }
 }
