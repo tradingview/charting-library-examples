@@ -6,6 +6,10 @@ Charting Library is a standalone solution for displaying charts. This free, down
 
 ## Content
 
+### android
+
+TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) integration into Android WebView
+
 ### angular5
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Angular 5](https://angular.io/) Integration Example
@@ -25,7 +29,3 @@ TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bit
 ### vuejs
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Vue.js](https://vuejs.org/) Integration Example
-
-### android
-
-TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) integration into Android WebView
