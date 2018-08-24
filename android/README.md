@@ -2,7 +2,7 @@
 
 ## How to start
 
-1. Copy all files from https://github.com/tradingview/charting_library/ to `app/src/main/assets/`. The earliest supported version of the Charting Library is 1.12. If you get 404 then you need to [request an access to this repository](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
+1. Copy all files from https://github.com/tradingview/charting_library/ to `app/src/main/assets/charting_library/`. The earliest supported version of the Charting Library is 1.12. If you get 404 then you need to [request an access to this repository](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
 
 ## What is Charting Library
 

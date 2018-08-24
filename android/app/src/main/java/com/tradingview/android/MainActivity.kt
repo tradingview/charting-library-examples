@@ -17,6 +17,6 @@ class MainActivity : AppCompatActivity() {
         webView.settings.javaScriptEnabled = true
         webView.settings.allowFileAccessFromFileURLs = true
         webView.webViewClient = WebViewClient()
-        webView.loadUrl("file:///android_asset/mobile_white.html")
+        webView.loadUrl("file:///android_asset/charting_library/mobile_white.html")
     }
 }
