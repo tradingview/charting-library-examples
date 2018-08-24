@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         webView.settings.allowFileAccessFromFileURLs = true
         webView.settings.textZoom = 100
         webView.webViewClient = WebViewClient()
-        webView.loadUrl("file:///android_asset/charting_library/mobile_white.html")
+        webView.loadUrl("file:///android_asset/charting_library/index.html")
         setContentView(webView)
     }
 }
