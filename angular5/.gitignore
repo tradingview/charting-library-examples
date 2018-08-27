@@ -8,6 +8,8 @@
 
 # dependencies
 /node_modules
+src/assets/charting_library/
+src/assets/datafeeds/
 
 # IDEs and editors
 /.idea
