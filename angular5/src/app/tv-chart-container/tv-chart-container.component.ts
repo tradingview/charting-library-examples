@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import {
     widget,
     IChartingLibraryWidget,
@@ -11,7 +11,7 @@ import {
     templateUrl: './tv-chart-container.component.html',
     styleUrls: ['./tv-chart-container.component.css']
 })
-export class TvChartContainerComponent implements OnInit {
+export class TvChartContainerComponent implements OnInit, OnDestroy {
     private _symbol: ChartingLibraryWidgetOptions['symbol'] = 'AAPL';
     private _interval: ChartingLibraryWidgetOptions['interval'] = 'D';
     // BEWARE: no trailing slash is expected in feed URL
@@ -123,5 +123,12 @@ export class TvChartContainerComponent implements OnInit {
 
             button[0].innerHTML = 'Check API';
         });
+    }
+
+    ngOnDestroy() {
+        if (this._tvWidget !== null) {
+            this._tvWidget.remove();
+            this._tvWidget = null;
+        }
     }
 }
