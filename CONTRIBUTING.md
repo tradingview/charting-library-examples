@@ -1,6 +1,7 @@
 ## Creating new issue
 
 1. Please make sure that your issue is addressed to the examples, **NOT to the [Charting Library](https://github.com/tradingview/charting_library)**.
+1. Please search for similar issues before creating a new one. It is quite possible that someone has already encountered the same issue and you can find a solution much faster.
 
 ## Contributing Code
 
