@@ -63,7 +63,6 @@ export default {
       type: Object,
     }
   },
-  tvWidget: null,
   mounted() {
     const widgetOptions = {
       symbol: this.symbol,
@@ -86,7 +85,6 @@ export default {
     };
 
     const tvWidget = new widget(widgetOptions);
-    this.tvWidget = tvWidget;
 
     tvWidget.onChartReady(() => {
       const button = tvWidget.createButton()
@@ -103,12 +101,6 @@ export default {
 
       button[0].innerHTML = 'Check API';
     });
-  },
-  destroyed() {
-    if (this.tvWidget !== null) {
-      this.tvWidget.remove();
-      this.tvWidget = null;
-    }
   }
 }
 </script>
