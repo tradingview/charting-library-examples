@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {
     widget,
-    onready,
+    IChartingLibraryWidget,
     ChartingLibraryWidgetOptions,
     LanguageCode,
 } from '../../assets/charting_library/charting_library.min';
@@ -24,6 +24,7 @@ export class TvChartContainerComponent implements OnInit {
     private _fullscreen: ChartingLibraryWidgetOptions['fullscreen'] = false;
     private _autosize: ChartingLibraryWidgetOptions['autosize'] = true;
     private _containerId: ChartingLibraryWidgetOptions['container_id'] = 'tv_chart_container';
+    private _tvWidget: IChartingLibraryWidget | null = null;
 
     @Input()
     set symbol(symbol: ChartingLibraryWidgetOptions['symbol']) {
@@ -105,23 +106,22 @@ export class TvChartContainerComponent implements OnInit {
             autosize: this._autosize,
         };
 
-        onready(() => {
-            const tvWidget = new widget(widgetOptions);
+        const tvWidget = new widget(widgetOptions);
+        this._tvWidget = tvWidget;
 
-            tvWidget.onChartReady(() => {
-                const button = tvWidget.createButton()
-                    .attr('title', 'Click to show a notification popup')
-                    .addClass('apply-common-tooltip')
-                    .on('click', () => tvWidget.showNoticeDialog({
-                        title: 'Notification',
-                        body: 'TradingView Charting Library API works correctly',
-                        callback: () => {
-                            console.log('Noticed!');
-                        },
-                    }));
+        tvWidget.onChartReady(() => {
+            const button = tvWidget.createButton()
+                .attr('title', 'Click to show a notification popup')
+                .addClass('apply-common-tooltip')
+                .on('click', () => tvWidget.showNoticeDialog({
+                    title: 'Notification',
+                    body: 'TradingView Charting Library API works correctly',
+                    callback: () => {
+                        console.log('Noticed!');
+                    },
+                }));
 
-                button[0].innerHTML = 'Check API';
-            });
+            button[0].innerHTML = 'Check API';
         });
     }
 }
