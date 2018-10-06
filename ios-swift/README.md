@@ -1,4 +1,4 @@
-# TradingView Charting Library iOS Integration Example
+# TradingView Charting Library iOS (Swift version) Integration Example
 
 ## How to start
 
