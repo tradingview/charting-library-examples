@@ -75,7 +75,7 @@ GEM
     crass (1.0.4)
     erubi (1.7.1)
     execjs (2.7.0)
-    ffi (1.9.23)
+    ffi (1.9.24)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.0.1)
