@@ -107,7 +107,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     public_suffix (3.0.2)
     puma (3.11.4)
-    rack (2.0.5)
+    rack (2.0.6)
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
     rails (5.2.0)
