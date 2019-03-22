@@ -15,7 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   // If you want to bundle javascript code:
-  // 1. Uncomment the line #25 and comment the line #26
+  // 1. Uncomment the line #24 and comment the line #25
   // 2. Run bash script bundler.sh in the project root folder
   // 3. Start the project in XCode
 
