@@ -3,7 +3,7 @@
 ## How to start
 
 1. Install dependencies `npm install`.
-1. Copy `charting_library` folder from https://github.com/tradingview/charting_library/ to `/public` and to `/src/libraries` folders. The earliest supported version of the Charting Library is 1.12. If you get 404 then you need to [request an access to this repository](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
+1. Copy `charting_library` folder from https://github.com/tradingview/charting_library/ to `/public` and to `/src/libraries` folders. In fact, you only need `charting_library.min.js` in `/src/libraries` folder. The earliest supported version of the Charting Library is 1.12. If you get 404 then you need to [request an access to this repository](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
 1. Run `npm start`. It will build the project and open a default browser with the Charting Library.
 
 ## What is Charting Library
