@@ -24,7 +24,7 @@ TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bit
 
 ### react-native
 
-TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/), [React Native](https://facebook.github.io/react-native/) Integration Example
+TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [React Native](https://facebook.github.io/react-native/) Integration Example
 
 ### react-typescript
 
