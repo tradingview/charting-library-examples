@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build"
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test"
   },
   "devDependencies": {
     "@types/jquery": "^1.10.31",
