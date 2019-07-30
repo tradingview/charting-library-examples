@@ -11,9 +11,9 @@
     "vue": "~2.5.17"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "3.0.4",
+    "@vue/cli-plugin-babel": "^3.9.2",
     "@vue/cli-plugin-eslint": "3.0.4",
-    "@vue/cli-service": "3.0.4",
+    "@vue/cli-service": "^3.9.3",
     "babel-core": "6.26.3",
     "babel-loader": "7.1.5",
     "node-sass": "~4.9.4",
