@@ -51,10 +51,11 @@ export class TVChartContainer extends React.PureComponent {
 		this.tvWidget = tvWidget;
 
 		tvWidget.onChartReady(() => {
-			const button = tvWidget.createButton()
-				.attr('title', 'Click to show a notification popup')
-				.addClass('apply-common-tooltip')
-				.on('click', () => tvWidget.showNoticeDialog({
+			tvWidget.headerReady().then(() => {
+				const button = tvWidget.createButton();
+				button.setAttribute('title', 'Click to show a notification popup');
+				button.classList.add('apply-common-tooltip');
+				button.addEventListener('click', () => tvWidget.showNoticeDialog({
 					title: 'Notification',
 					body: 'TradingView Charting Library API works correctly',
 					callback: () => {
@@ -62,7 +63,8 @@ export class TVChartContainer extends React.PureComponent {
 					},
 				}));
 
-			button[0].innerHTML = 'Check API';
+				button.innerHTML = 'Check API';
+			});
 		});
 	}
 

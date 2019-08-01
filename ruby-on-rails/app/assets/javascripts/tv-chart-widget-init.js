@@ -5,7 +5,7 @@ function getLanguageFromURL() {
 	return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
-TradingView.onready(function() {
+function initOnReady() {
 	var widget = window.tvWidget = new TradingView.widget({
 			symbol: 'AAPL',
 			// BEWARE: no trailing slash is expected in feed URL
@@ -28,10 +28,13 @@ TradingView.onready(function() {
 	});
 
 	widget.onChartReady(() => {
-		const button = widget.createButton()
-			.attr('title', 'Click to show a notification popup')
-			.addClass('apply-common-tooltip')
-			.on('click', () => widget.showNoticeDialog({
+		widget.headerReady().then(() => {
+			const button = widget.createButton();
+
+			button.setAttribute('title', 'Click to show a notification popup');
+			button.classList.add('apply-common-tooltip');
+
+			button.addEventListener('click', () => widget.showNoticeDialog({
 				title: 'Notification',
 				body: 'TradingView Charting Library API works correctly',
 				callback: () => {
@@ -39,6 +42,9 @@ TradingView.onready(function() {
 				},
 			}));
 
-		button[0].innerHTML = 'Check API';
+			button.innerHTML = 'Check API';
+		});
 	});
-});
+};
+
+window.addEventListener('DOMContentLoaded', initOnReady, false);
