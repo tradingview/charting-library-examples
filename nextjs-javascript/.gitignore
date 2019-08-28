@@ -1,0 +1,10 @@
+node_modules/
+static/charting_library/
+static/datafeeds/
+build/
+
+.prettierignore
+.prettierrc
+yarn.lock
+.next
+.idea
