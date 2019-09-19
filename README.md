@@ -18,6 +18,10 @@ TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bit
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) integration into iOS WKWebView
 
+### nextjs-javascript
+
+TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Next.js](https://nextjs.org/) Integration Example
+
 ### react-javascript
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [React](https://reactjs.org) Integration Example
