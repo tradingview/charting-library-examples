@@ -1,9 +1,9 @@
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import {
-    widget,
-    IChartingLibraryWidget,
-    ChartingLibraryWidgetOptions,
-    LanguageCode,
+  widget,
+  IChartingLibraryWidget,
+  ChartingLibraryWidgetOptions,
+  LanguageCode, ResolutionString,
 } from '../../assets/charting_library/charting_library.min';
 
 @Component({
@@ -12,8 +12,8 @@ import {
     styleUrls: ['./tv-chart-container.component.css']
 })
 export class TvChartContainerComponent implements OnInit, OnDestroy {
-    private _symbol: ChartingLibraryWidgetOptions['symbol'] = 'AAPL';
-    private _interval: ChartingLibraryWidgetOptions['interval'] = 'D';
+    private _symbol: ChartingLibraryWidgetOptions['symbol'] = 'AAPL'; // AAPL
+    private _interval: ChartingLibraryWidgetOptions['interval'] = 'D' as ResolutionString;
     // BEWARE: no trailing slash is expected in feed URL
     private _datafeedUrl = 'https://demo_feed.tradingview.com';
     private _libraryPath: ChartingLibraryWidgetOptions['library_path'] = '/assets/charting_library/';
