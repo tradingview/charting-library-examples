@@ -12,7 +12,7 @@ import {
     styleUrls: ['./tv-chart-container.component.css']
 })
 export class TvChartContainerComponent implements OnInit, OnDestroy {
-    private _symbol: ChartingLibraryWidgetOptions['symbol'] = 'AAPL'; // AAPL
+    private _symbol: ChartingLibraryWidgetOptions['symbol'] = 'AAPL';
     private _interval: ChartingLibraryWidgetOptions['interval'] = 'D' as ResolutionString;
     // BEWARE: no trailing slash is expected in feed URL
     private _datafeedUrl = 'https://demo_feed.tradingview.com';
