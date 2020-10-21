@@ -1,9 +1,10 @@
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import {
-  widget,
-  IChartingLibraryWidget,
-  ChartingLibraryWidgetOptions,
-  LanguageCode, ResolutionString,
+    widget,
+    IChartingLibraryWidget,
+    ChartingLibraryWidgetOptions,
+    LanguageCode,
+    ResolutionString,
 } from '../../assets/charting_library/charting_library.min';
 
 @Component({
