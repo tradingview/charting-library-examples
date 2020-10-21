@@ -4,6 +4,7 @@ import {
     IChartingLibraryWidget,
     ChartingLibraryWidgetOptions,
     LanguageCode,
+    ResolutionString,
 } from '../../assets/charting_library/charting_library.min';
 
 @Component({
@@ -13,7 +14,7 @@ import {
 })
 export class TvChartContainerComponent implements OnInit, OnDestroy {
     private _symbol: ChartingLibraryWidgetOptions['symbol'] = 'AAPL';
-    private _interval: ChartingLibraryWidgetOptions['interval'] = 'D';
+    private _interval: ChartingLibraryWidgetOptions['interval'] = 'D' as ResolutionString;
     // BEWARE: no trailing slash is expected in feed URL
     private _datafeedUrl = 'https://demo_feed.tradingview.com';
     private _libraryPath: ChartingLibraryWidgetOptions['library_path'] = '/assets/charting_library/';
