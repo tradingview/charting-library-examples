@@ -38,6 +38,10 @@ TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bit
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Ruby-on-Rails](http://rubyonrails.org/) Integration Example
 
+### ruby-on-rails v6 (with webpacker)
+
+TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Ruby-on-Rails](http://rubyonrails.org/) v6 (with webpacker) Integration Example
+
 ### vuejs
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Vue.js](https://vuejs.org/) Integration Example
