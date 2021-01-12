@@ -4,7 +4,7 @@
 
 <script>
 
-import { widget } from '../charting_library.min';
+import { widget } from '../charting_library';
 
 function getLanguageFromURL() {
   const regex = new RegExp('[\\?&]lang=([^&#]*)');
