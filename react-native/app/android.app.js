@@ -11,6 +11,8 @@ class AndroidChart extends Component {
               null,
               function(interval) {
                   const response = { type: "onIntervalChanged", interval: interval }
+                  //window.ReactNativeWebView.postMessage accepts one argument, data, 
+                  //which will be available on the event object, event.nativeEvent.data. data must be a string.
                   window.ReactNativeWebView.postMessage(JSON.stringify(response));
               }
           );
