@@ -6,19 +6,17 @@ import { WebView } from 'react-native-webview';
 class AndroidChart extends Component {
 
     jsToInject = `
-        tvWidget.onChartReady(function() {
-            tvWidget.chart().onIntervalChanged().subscribe(
-                null,
-                function(interval) {
-                    window.ReactNativeWebView.postMessage({ 
-                        type: "onIntervalChanged",
-                        interval: interval 
-                    });
-                }
-            );
-        });
-        true; // note: this is required, or you'll sometimes get silent failures 
-              // (https://github.com/react-native-webview/react-native-webview/blob/master/docs/Guide.md)
+      tvWidget.onChartReady(function() {
+          tvWidget.chart().onIntervalChanged().subscribe(
+              null,
+              function(interval) {
+                  const response = { type: "onIntervalChanged", interval: interval }
+                  window.ReactNativeWebView.postMessage(JSON.stringify(response));
+              }
+          );
+      });
+      true; // note: this is required, or you'll sometimes get silent failures 
+            // (https://github.com/react-native-webview/react-native-webview/blob/master/docs/Guide.md)
     `;
 
     render() {
@@ -34,9 +32,9 @@ class AndroidChart extends Component {
                 onShouldStartLoadWithRequest={() => false}
                 injectedJavaScript={this.jsToInject}
                 onMessage={(event) => {
-                    const data = event.nativeEvent.data
+                    const data = JSON.parse(event.nativeEvent.data)
                     if (data.type == "onIntervalChanged") {
-                        ToastAndroid.show("Interval = " + event.nativeEvent.data, ToastAndroid.SHORT);
+                        ToastAndroid.show("Interval = " + data.interval, ToastAndroid.SHORT);
                     }
                 }}
             />
