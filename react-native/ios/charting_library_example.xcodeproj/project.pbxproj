@@ -19,18 +19,6 @@
 		541AB1CAEBEC3D406EF0CBAB /* libPods-charting_library_example-charting_library_exampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBE9C0E9C332C71FB0F60C38 /* libPods-charting_library_example-charting_library_exampleTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A549B7786DEED3329FBE2CE7 /* libPods-charting_library_example-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31FD68D2D94BD8660BEDC34D /* libPods-charting_library_example-tvOS.a */; };
-		A874981C259CDCDE00F97B9C /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = A8749810259CDCDD00F97B9C /* index.html */; };
-		A874981D259CDCDE00F97B9C /* themed.html in Resources */ = {isa = PBXBuildFile; fileRef = A8749811259CDCDD00F97B9C /* themed.html */; };
-		A874981E259CDCDE00F97B9C /* datafeeds in Resources */ = {isa = PBXBuildFile; fileRef = A8749812259CDCDD00F97B9C /* datafeeds */; };
-		A874981F259CDCDE00F97B9C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A8749813259CDCDD00F97B9C /* README.md */; };
-		A8749820259CDCDE00F97B9C /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = A8749814259CDCDD00F97B9C /* test.html */; };
-		A8749821259CDCDE00F97B9C /* charting_library in Resources */ = {isa = PBXBuildFile; fileRef = A8749815259CDCDD00F97B9C /* charting_library */; };
-		A8749822259CDCDE00F97B9C /* mobile_white.html in Resources */ = {isa = PBXBuildFile; fileRef = A8749816259CDCDD00F97B9C /* mobile_white.html */; };
-		A8749823259CDCDE00F97B9C /* themed.css in Resources */ = {isa = PBXBuildFile; fileRef = A8749817259CDCDD00F97B9C /* themed.css */; };
-		A8749824259CDCDE00F97B9C /* mobile_black.html in Resources */ = {isa = PBXBuildFile; fileRef = A8749818259CDCDE00F97B9C /* mobile_black.html */; };
-		A8749825259CDCDE00F97B9C /* CONTRIBUTING.md in Resources */ = {isa = PBXBuildFile; fileRef = A8749819259CDCDE00F97B9C /* CONTRIBUTING.md */; };
-		A8749826259CDCDE00F97B9C /* featuresets.html in Resources */ = {isa = PBXBuildFile; fileRef = A874981A259CDCDE00F97B9C /* featuresets.html */; };
-		A8749827259CDCDE00F97B9C /* featuresets.css in Resources */ = {isa = PBXBuildFile; fileRef = A874981B259CDCDE00F97B9C /* featuresets.css */; };
 		E4377CE379B6D690E064CB2E /* libPods-charting_library_example-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B84181A3D17044AC46BA058B /* libPods-charting_library_example-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
@@ -72,18 +60,6 @@
 		7B54CD478542D6403FB72D77 /* Pods-charting_library_example-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-charting_library_example-tvOS.release.xcconfig"; path = "Target Support Files/Pods-charting_library_example-tvOS/Pods-charting_library_example-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = charting_library_example/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8720B6233D7F7BA5D118E055 /* libPods-charting_library_example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-charting_library_example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8749810259CDCDD00F97B9C /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = assets/index.html; sourceTree = SOURCE_ROOT; };
-		A8749811259CDCDD00F97B9C /* themed.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = themed.html; path = assets/themed.html; sourceTree = SOURCE_ROOT; };
-		A8749812259CDCDD00F97B9C /* datafeeds */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = datafeeds; path = assets/datafeeds; sourceTree = SOURCE_ROOT; };
-		A8749813259CDCDD00F97B9C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = assets/README.md; sourceTree = SOURCE_ROOT; };
-		A8749814259CDCDD00F97B9C /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = test.html; path = assets/test.html; sourceTree = SOURCE_ROOT; };
-		A8749815259CDCDD00F97B9C /* charting_library */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = charting_library; path = assets/charting_library; sourceTree = SOURCE_ROOT; };
-		A8749816259CDCDD00F97B9C /* mobile_white.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = mobile_white.html; path = assets/mobile_white.html; sourceTree = SOURCE_ROOT; };
-		A8749817259CDCDD00F97B9C /* themed.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = themed.css; path = assets/themed.css; sourceTree = SOURCE_ROOT; };
-		A8749818259CDCDE00F97B9C /* mobile_black.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = mobile_black.html; path = assets/mobile_black.html; sourceTree = SOURCE_ROOT; };
-		A8749819259CDCDE00F97B9C /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CONTRIBUTING.md; path = assets/CONTRIBUTING.md; sourceTree = SOURCE_ROOT; };
-		A874981A259CDCDE00F97B9C /* featuresets.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = featuresets.html; path = assets/featuresets.html; sourceTree = SOURCE_ROOT; };
-		A874981B259CDCDE00F97B9C /* featuresets.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = featuresets.css; path = assets/featuresets.css; sourceTree = SOURCE_ROOT; };
 		B84181A3D17044AC46BA058B /* libPods-charting_library_example-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-charting_library_example-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB14139788F30DAF66ED47A /* Pods-charting_library_example-charting_library_exampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-charting_library_example-charting_library_exampleTests.debug.xcconfig"; path = "Target Support Files/Pods-charting_library_example-charting_library_exampleTests/Pods-charting_library_example-charting_library_exampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E0F6FF70464D147488EA127D /* Pods-charting_library_example-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-charting_library_example-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-charting_library_example-tvOS/Pods-charting_library_example-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -224,20 +200,7 @@
 		};
 		A8C1F4902576824900FADE8F /* charting */ = {
 			isa = PBXGroup;
-			children = (
-				A8749815259CDCDD00F97B9C /* charting_library */,
-				A8749819259CDCDE00F97B9C /* CONTRIBUTING.md */,
-				A8749812259CDCDD00F97B9C /* datafeeds */,
-				A874981B259CDCDE00F97B9C /* featuresets.css */,
-				A874981A259CDCDE00F97B9C /* featuresets.html */,
-				A8749810259CDCDD00F97B9C /* index.html */,
-				A8749818259CDCDE00F97B9C /* mobile_black.html */,
-				A8749816259CDCDD00F97B9C /* mobile_white.html */,
-				A8749813259CDCDD00F97B9C /* README.md */,
-				A8749814259CDCDD00F97B9C /* test.html */,
-				A8749817259CDCDD00F97B9C /* themed.css */,
-				A8749811259CDCDD00F97B9C /* themed.html */,
-			);
+			children = ();
 			path = charting;
 			sourceTree = "<group>";
 		};
@@ -384,19 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8749826259CDCDE00F97B9C /* featuresets.html in Resources */,
-				A8749827259CDCDE00F97B9C /* featuresets.css in Resources */,
-				A8749823259CDCDE00F97B9C /* themed.css in Resources */,
-				A8749820259CDCDE00F97B9C /* test.html in Resources */,
-				A8749825259CDCDE00F97B9C /* CONTRIBUTING.md in Resources */,
-				A874981F259CDCDE00F97B9C /* README.md in Resources */,
-				A874981C259CDCDE00F97B9C /* index.html in Resources */,
-				A874981D259CDCDE00F97B9C /* themed.html in Resources */,
-				A8749821259CDCDE00F97B9C /* charting_library in Resources */,
-				A874981E259CDCDE00F97B9C /* datafeeds in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
-				A8749822259CDCDE00F97B9C /* mobile_white.html in Resources */,
-				A8749824259CDCDE00F97B9C /* mobile_black.html in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
