@@ -2,9 +2,9 @@
 
 ## How to start
 
-1. Open Example.xcodeproj in Xcode. 
+1. Open Example.xcodeproj in Xcode.
 2. Right click on ChartingLibrary and select "Add Files to "Example"". Select "Create folder references" for the added folders. This is important because the library contains files with the same name, but in different folders, so the "Create folder references" option adds files to your application bundle with the same folder structure as in the library.
-3. Copy all files from https://github.com/tradingview/charting_library/. The earliest supported version of the Charting Library is 1.12. If you get 404 then you need to [request an access to this repository](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
+3. Copy all files from https://github.com/tradingview/charting_library/. The earliest supported version of the Charting Library is 17. If you get 404 then you need to [request an access to this repository](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
 
 ## What is Charting Library
 
