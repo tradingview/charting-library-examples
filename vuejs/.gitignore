@@ -3,5 +3,4 @@ dist/
 node_modules/
 public/charting_library/
 public/datafeeds/
-src/charting_library.js
 static/
