@@ -6,7 +6,7 @@ import {
 	LanguageCode,
 	IChartingLibraryWidget,
 	ResolutionString,
-} from '../../charting_library/charting_library';
+} from '../../charting_library';
 
 export interface ChartContainerProps {
 	symbol: ChartingLibraryWidgetOptions['symbol'];
