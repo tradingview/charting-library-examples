@@ -3,7 +3,7 @@
 ## How to start
 
 1. Install dependencies `npm install`.
-1. Copy `charting_library` folder from https://github.com/tradingview/charting_library/ to `/src/assets`. The earliest supported version of the Charting Library is 1.12. If you get 404 then you need to [request an access to this repository](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
+1. Copy `charting_library` folder from https://github.com/tradingview/charting_library/ to `/src/assets`. The earliest supported version of the Charting Library is 17. If you get 404 then you need to [request an access to this repository](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
 1. Copy `datafeeds` folder from https://github.com/tradingview/charting_library/ to `/src/assets`.
 1. Run `./node_modules/.bin/ng serve` (use `"./node_modules/.bin/ng" serve` in Windows) for a dev server and navigate to `http://localhost:4200/`.
 

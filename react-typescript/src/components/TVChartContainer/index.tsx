@@ -5,7 +5,8 @@ import {
 	ChartingLibraryWidgetOptions,
 	LanguageCode,
 	IChartingLibraryWidget,
-} from '../../charting_library/charting_library.min';
+	ResolutionString,
+} from '../../charting_library';
 
 export interface ChartContainerProps {
 	symbol: ChartingLibraryWidgetOptions['symbol'];
@@ -36,7 +37,7 @@ function getLanguageFromURL(): LanguageCode | null {
 export class TVChartContainer extends React.PureComponent<Partial<ChartContainerProps>, ChartContainerState> {
 	public static defaultProps: ChartContainerProps = {
 		symbol: 'AAPL',
-		interval: 'D',
+		interval: 'D' as ResolutionString,
 		containerId: 'tv_chart_container',
 		datafeedUrl: 'https://demo_feed.tradingview.com',
 		libraryPath: '/charting_library/',

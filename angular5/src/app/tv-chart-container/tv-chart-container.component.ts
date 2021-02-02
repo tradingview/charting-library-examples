@@ -5,7 +5,7 @@ import {
     ChartingLibraryWidgetOptions,
     LanguageCode,
     ResolutionString,
-} from '../../assets/charting_library/charting_library.min';
+} from '../../assets/charting_library';
 
 @Component({
     selector: 'app-tv-chart-container',

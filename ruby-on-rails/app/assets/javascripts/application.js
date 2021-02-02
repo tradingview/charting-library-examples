@@ -15,5 +15,5 @@
 //= require turbolinks
 //= require datafeeds/udf/dist/bundle.js
 //= require datafeeds/udf/dist/polyfills.js
-//= require charting_library/charting_library.min.js
+//= require charting_library/charting_library.js
 //= require_tree .
