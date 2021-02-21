@@ -1,0 +1,31 @@
+{
+  "name": "nuxtjs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "yarn lint:js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "nuxt": "^2.14.12"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^5.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@vue/test-utils": "^1.1.2",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.18.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.5.0",
+    "jest": "^26.6.3",
+    "vue-jest": "^3.0.4"
+  }
+}
