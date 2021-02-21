@@ -22,6 +22,10 @@ TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bit
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Next.js](https://nextjs.org/) Integration Example
 
+### nuxtjs
+
+TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Nuxt.js](https://nuxtjs.org/) Integration Example
+
 ### react-javascript
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [React](https://reactjs.org) Integration Example
