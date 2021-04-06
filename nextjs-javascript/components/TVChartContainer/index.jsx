@@ -1,6 +1,6 @@
 import * as React from 'react';
-import './index.css';
-import { widget } from '../../static/charting_library';
+import styles from './index.module.css';
+import { widget } from '../../public/static/charting_library';
 
 function getLanguageFromURL() {
 	const regex = new RegExp('[\\?&]lang=([^&#]*)');
@@ -79,7 +79,7 @@ export class TVChartContainer extends React.PureComponent {
 		return (
 			<div
 				id={ this.props.containerId }
-				className={ 'TVChartContainer' }
+				className={ styles.TVChartContainer }
 			/>
 		);
 	}
