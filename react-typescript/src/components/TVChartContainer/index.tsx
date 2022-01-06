@@ -59,7 +59,7 @@ export class TVChartContainer extends React.PureComponent<Partial<ChartContainer
 			// tslint:disable-next-line:no-any
 			datafeed: new (window as any).Datafeeds.UDFCompatibleDatafeed(this.props.datafeedUrl),
 			interval: this.props.interval as ChartingLibraryWidgetOptions['interval'],
-			container_id: this.props.containerId as ChartingLibraryWidgetOptions['container_id'],
+			container: this.props.containerId as ChartingLibraryWidgetOptions['container'],
 			library_path: this.props.libraryPath as string,
 
 			locale: getLanguageFromURL() || 'en',
