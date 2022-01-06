@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { version } from '../../assets/charting_library';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app-header.component.css']
 })
 export class AppHeaderComponent {
-  title = 'TradingView Charting Library and Angular 5 Integration Example';
+  title = 'TradingView Charting Library and Angular 5 Integration Example ' + version();
 }

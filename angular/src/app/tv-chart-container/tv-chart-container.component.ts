@@ -24,7 +24,7 @@ export class TvChartContainerComponent implements OnInit, OnDestroy {
     private _userId: ChartingLibraryWidgetOptions['user_id'] = 'public_user_id';
     private _fullscreen: ChartingLibraryWidgetOptions['fullscreen'] = false;
     private _autosize: ChartingLibraryWidgetOptions['autosize'] = true;
-    private _containerId: ChartingLibraryWidgetOptions['container_id'] = 'tv_chart_container';
+    private _containerId: ChartingLibraryWidgetOptions['container'] = 'tv_chart_container';
     private _tvWidget: IChartingLibraryWidget | null = null;
 
     @Input()
@@ -94,7 +94,7 @@ export class TvChartContainerComponent implements OnInit, OnDestroy {
             symbol: this._symbol,
             datafeed: new (window as any).Datafeeds.UDFCompatibleDatafeed(this._datafeedUrl),
             interval: this._interval,
-            container_id: this._containerId,
+            container: this._containerId,
             library_path: this._libraryPath,
             locale: getLanguageFromURL() || 'en',
             disabled_features: ['use_localstorage_for_settings'],
