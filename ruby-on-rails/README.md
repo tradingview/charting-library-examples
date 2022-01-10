@@ -1,17 +1,26 @@
 # TradingView Charting Library and Ruby on Rails Integration Example.
 
+The earliest supported version of the charting library for these examples is `v20.033`.
+
 ## How to start
 
-1. Install Ruby. This project uses 2.5.1 version.
+1. Check that you can view https://github.com/tradingview/charting_library/. If you do not have access then you can [request access to this repository here](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
 
-1. Install Ruby on Rails. This project uses 5.2.4.4 version.
+1. Install Ruby. This example was created using Ruby 3.0.3.
 
-1. Copy `charting_library` folder from https://github.com/tradingview/charting_library/ to `/vendor/assets/javascripts`. The earliest supported version of the Charting Library is 17. If you get 404 then you need to [request an access to this repository](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
+1. Install Ruby on Rails. This example was created using Rails 7.0.1.
 
-1. Copy `datafeeds` folder from https://github.com/tradingview/charting_library/ to `/vendor/assets/javascripts`.
+1. Install Rails dependencies with `bundle install`.
+
+1. Copy the charting library files
+	1. If you are able to run bash scripts then the `copy_charting_library_files.sh` script can be used to copy the current stable version's files. 
+	1. If you are not able to run bash scripts then do the following:
+		1. Copy `charting_library` folder from https://github.com/tradingview/charting_library/ to `/public`. 
+		1. Copy `datafeeds` folder from https://github.com/tradingview/charting_library/ to `/public`.
 
 1. Run `rails s` and open `http://localhost:3000`.
 
+Note that the charting library files are intentionally not included in the Rails asset pipeline. [Fingerprinting](https://guides.rubyonrails.org/asset_pipeline.html#what-is-fingerprinting-and-why-should-i-care-questionmark) the charting_library files will break the library so we put the files directly into `public`. In development mode Rails will serve these public files for you. In production you would need to ensure that the files in `public` are served by your production webserver.
 
 ## What is Charting Library
 

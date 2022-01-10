@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get 'library/index'
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  root 'library#index'
+  # Defines the root path route ("/")
+  # root "articles#index"
+
+  root "chart#index"
 end

@@ -5,6 +5,8 @@ function getLanguageFromURL() {
 	return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
+document.getElementById('header-text').textContent += TradingView.version();
+
 function initOnReady() {
 	var widget = window.tvWidget = new TradingView.widget({
 			symbol: 'AAPL',
@@ -12,8 +14,8 @@ function initOnReady() {
 			// tslint:disable-next-line:no-any
 			datafeed: new window.Datafeeds.UDFCompatibleDatafeed('https://demo_feed.tradingview.com'),
 			interval: 'D',
-			container_id: 'tv_chart_container',
-			library_path: '/assets/charting_library/',
+			container: 'tv_chart_container',
+			library_path: '/charting_library/',
 
 			locale: getLanguageFromURL() || 'en',
 			disabled_features: ['use_localstorage_for_settings'],
