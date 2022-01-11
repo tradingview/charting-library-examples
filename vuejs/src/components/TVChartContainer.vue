@@ -70,7 +70,7 @@ export default {
       // BEWARE: no trailing slash is expected in feed URL
       datafeed: new window.Datafeeds.UDFCompatibleDatafeed(this.datafeedUrl),
       interval: this.interval,
-      container_id: this.containerId,
+      container: this.containerId,
       library_path: this.libraryPath,
 
       locale: getLanguageFromURL() || 'en',
