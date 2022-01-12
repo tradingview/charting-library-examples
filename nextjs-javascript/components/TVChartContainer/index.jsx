@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styles from './index.module.css';
-import { widget } from '../../public/static/charting_library';
+import { widget, version } from '../../public/static/charting_library';
 
 function getLanguageFromURL() {
 	const regex = new RegExp('[\\?&]lang=([^&#]*)');
@@ -32,7 +32,7 @@ export class TVChartContainer extends React.PureComponent {
 			// BEWARE: no trailing slash is expected in feed URL
 			datafeed: new window.Datafeeds.UDFCompatibleDatafeed(this.props.datafeedUrl),
 			interval: this.props.interval,
-			container_id: this.props.containerId,
+			container: this.props.containerId,
 			library_path: this.props.libraryPath,
 
 			locale: getLanguageFromURL() || 'en',
@@ -76,11 +76,13 @@ export class TVChartContainer extends React.PureComponent {
 	}
 
 	render() {
-		return (
-			<div
-				id={ this.props.containerId }
-				className={ styles.TVChartContainer }
-			/>
+		return (	
+			<>
+				<header className={styles.VersionHeader}>
+					<h1>TradingView Charting Library and Next.js Integration Example {version()}</h1>
+				</header>
+				<div id={this.props.containerId} className={styles.TVChartContainer} />
+			</>
 		);
 	}
 }
