@@ -28,6 +28,7 @@ build/
 .gradle
 local.properties
 *.iml
+*.hprof
 
 # node.js
 #
@@ -58,5 +59,30 @@ buck-out/
 # CocoaPods
 /ios/Pods/
 
-# Lock
-package-lock.json
+# Charting Library Android
+android/app/src/main/assets/index.html
+android/app/src/main/assets/test.html
+android/app/src/main/assets/featuresets.css
+android/app/src/main/assets/featuresets.html
+android/app/src/main/assets/themed.css
+android/app/src/main/assets/themed.html
+android/app/src/main/assets/mobile_white.html
+android/app/src/main/assets/mobile_black.html
+android/app/src/main/assets/charting_library/
+android/app/src/main/assets/datafeeds/
+android/app/src/main/assets/CONTRIBUTING.md
+android/app/src/main/assets/README.md
+
+# Charting Library iOS
+ios/index.html
+ios/test.html
+ios/featuresets.css
+ios/featuresets.html
+ios/themed.css
+ios/themed.html
+ios/mobile_white.html
+ios/mobile_black.html
+ios/charting_library/
+ios/datafeeds/
+ios/CONTRIBUTING.md
+ios/README.md
