@@ -22,7 +22,7 @@ export interface ChartContainerProps {
 	fullscreen: ChartingLibraryWidgetOptions['fullscreen'];
 	autosize: ChartingLibraryWidgetOptions['autosize'];
 	studiesOverrides: ChartingLibraryWidgetOptions['studies_overrides'];
-	containerId: ChartingLibraryWidgetOptions['container_id'];
+	container: ChartingLibraryWidgetOptions['container'];
 }
 
 export interface ChartContainerState {
@@ -35,10 +35,9 @@ function getLanguageFromURL(): LanguageCode | null {
 }
 
 export class TVChartContainer extends React.PureComponent<Partial<ChartContainerProps>, ChartContainerState> {
-	public static defaultProps: ChartContainerProps = {
+	public static defaultProps: Omit<ChartContainerProps, 'container'> = {
 		symbol: 'AAPL',
 		interval: 'D' as ResolutionString,
-		containerId: 'tv_chart_container',
 		datafeedUrl: 'https://demo_feed.tradingview.com',
 		libraryPath: '/charting_library/',
 		chartsStorageUrl: 'https://saveload.tradingview.com',
@@ -51,15 +50,20 @@ export class TVChartContainer extends React.PureComponent<Partial<ChartContainer
 	};
 
 	private tvWidget: IChartingLibraryWidget | null = null;
+	private ref: React.RefObject<HTMLDivElement> = React.createRef();
 
 	public componentDidMount(): void {
+		if (!this.ref.current) {
+			return;
+		}
+
 		const widgetOptions: ChartingLibraryWidgetOptions = {
 			symbol: this.props.symbol as string,
 			// BEWARE: no trailing slash is expected in feed URL
 			// tslint:disable-next-line:no-any
 			datafeed: new (window as any).Datafeeds.UDFCompatibleDatafeed(this.props.datafeedUrl),
 			interval: this.props.interval as ChartingLibraryWidgetOptions['interval'],
-			container: this.props.containerId as ChartingLibraryWidgetOptions['container'],
+			container: this.ref.current,
 			library_path: this.props.libraryPath as string,
 
 			locale: getLanguageFromURL() || 'en',
@@ -104,7 +108,7 @@ export class TVChartContainer extends React.PureComponent<Partial<ChartContainer
 	public render(): JSX.Element {
 		return (
 			<div
-				id={ this.props.containerId }
+				ref={ this.ref }
 				className={ 'TVChartContainer' }
 			/>
 		);

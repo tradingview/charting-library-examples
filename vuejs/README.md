@@ -1,6 +1,6 @@
 # TradingView Charting Library and Vue.js Integration Example (TypeScript)
 
-The earliest supported version of the charting library for these examples is `v20.033`.
+The earliest supported version of the charting library for these examples is `v20`.
 
 ## How to start
 

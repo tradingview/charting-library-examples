@@ -1,5 +1,5 @@
 <template>
-<div class="TVChartContainer" :id="containerId" />
+<div class="TVChartContainer" id="tv-chart-container" />
 </template>
 
 <script>
@@ -21,10 +21,6 @@ export default {
     },
     interval: {
       default: 'D',
-      type: String,
-    },
-    containerId: {
-      default: 'tv_chart_container',
       type: String,
     },
     datafeedUrl: {
@@ -65,12 +61,13 @@ export default {
   },
   tvWidget: null,
   mounted() {
+    const container = document.getElementById('tv-chart-container')
     const widgetOptions = {
       symbol: this.symbol,
       // BEWARE: no trailing slash is expected in feed URL
       datafeed: new window.Datafeeds.UDFCompatibleDatafeed(this.datafeedUrl),
       interval: this.interval,
-      container: this.containerId,
+      container: container,
       library_path: this.libraryPath,
 
       locale: getLanguageFromURL() || 'en',

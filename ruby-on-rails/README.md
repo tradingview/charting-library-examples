@@ -1,6 +1,6 @@
 # TradingView Charting Library and Ruby on Rails Integration Example.
 
-The earliest supported version of the charting library for these examples is `v20.033`.
+The earliest supported version of the charting library for these examples is `v20`.
 
 ## How to start
 

@@ -14,7 +14,7 @@ function initOnReady() {
 			// tslint:disable-next-line:no-any
 			datafeed: new window.Datafeeds.UDFCompatibleDatafeed('https://demo_feed.tradingview.com'),
 			interval: 'D',
-			container: 'tv_chart_container',
+			container: document.getElementById('tv_chart_container'),
 			library_path: '/charting_library/',
 
 			locale: getLanguageFromURL() || 'en',

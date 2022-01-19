@@ -12,7 +12,6 @@ export class TVChartContainer extends React.PureComponent {
 	static defaultProps = {
 		symbol: 'AAPL',
 		interval: 'D',
-		containerId: 'tv_chart_container',
 		datafeedUrl: 'https://demo_feed.tradingview.com',
 		libraryPath: '/static/charting_library/',
 		chartsStorageUrl: 'https://saveload.tradingview.com',
@@ -26,13 +25,19 @@ export class TVChartContainer extends React.PureComponent {
 
 	tvWidget = null;
 
+	constructor(props) {
+		super(props);
+
+		this.ref = React.createRef();
+	}
+
 	componentDidMount() {
 		const widgetOptions = {
 			symbol: this.props.symbol,
 			// BEWARE: no trailing slash is expected in feed URL
 			datafeed: new window.Datafeeds.UDFCompatibleDatafeed(this.props.datafeedUrl),
 			interval: this.props.interval,
-			container: this.props.containerId,
+			container: this.ref.current,
 			library_path: this.props.libraryPath,
 
 			locale: getLanguageFromURL() || 'en',
@@ -81,7 +86,7 @@ export class TVChartContainer extends React.PureComponent {
 				<header className={styles.VersionHeader}>
 					<h1>TradingView Charting Library and Next.js Integration Example {version()}</h1>
 				</header>
-				<div id={this.props.containerId} className={styles.TVChartContainer} />
+				<div ref={this.ref} className={styles.TVChartContainer} />
 			</>
 		);
 	}
