@@ -1,5 +1,5 @@
 <template>
-<div class="TVChartContainer" id="tv-chart-container" />
+<div class="TVChartContainer" ref="chartContainer" />
 </template>
 
 <script>
@@ -61,7 +61,7 @@ export default {
   },
   tvWidget: null,
   mounted() {
-    const container = document.getElementById('tv-chart-container')
+    const container = this.$refs.chartContainer;
     const widgetOptions = {
       symbol: this.symbol,
       // BEWARE: no trailing slash is expected in feed URL
