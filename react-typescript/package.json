@@ -5,7 +5,7 @@
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts-ts": "2.13.0"
+    "react-scripts-ts": "^4.0.8"
   },
   "scripts": {
     "start": "react-scripts-ts start",
@@ -13,7 +13,7 @@
     "test": "react-scripts-ts test"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.16",
+    "@types/jest": "^27.4.0",
     "@types/jquery": "^1.10.31",
     "@types/react": "^16.0.35",
     "@types/react-dom": "^16.0.3",

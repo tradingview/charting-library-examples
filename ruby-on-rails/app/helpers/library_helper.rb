@@ -1,2 +1,0 @@
-module LibraryHelper
-end

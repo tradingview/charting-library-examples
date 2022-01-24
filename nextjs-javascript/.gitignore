@@ -1,6 +1,6 @@
 node_modules/
-static/charting_library/
-static/datafeeds/
+public/static/charting_library/
+public/static/datafeeds/
 build/
 
 .prettierignore

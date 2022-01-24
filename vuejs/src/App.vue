@@ -1,8 +1,8 @@
 <template>
 <div class="app">
   <header class="app__header">
-    <h1 class="app__title">
-      TradingView Charting Library and Vue.js Integration Example
+    <h1 class="app__title" v-once>
+      TradingView Charting Library and Vue.js Integration Example {{ version }}
     </h1>
   </header>
   <TVChartContainer />
@@ -11,10 +11,15 @@
 
 <script>
 import TVChartContainer from './components/TVChartContainer.vue'
+import { version } from '../public/charting_library'
+
 export default {
   name: 'app',
   components: {
     TVChartContainer
+  },
+  data() {
+    return { version: version() }
   }
 }
 </script>

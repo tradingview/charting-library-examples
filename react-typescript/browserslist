@@ -1,0 +1,31 @@
+# This is an rcfile for Browserslist (https://www.npmjs.com/package/browserslist)
+
+# All browsers with significant market share
+> 1% in US
+> 1% in RU
+
+# Desktop
+last 3 Chrome versions
+last 3 Edge versions
+last 3 Firefox versions
+last 3 Safari versions
+last 3 Opera versions
+
+# Mobile
+last 3 iOS versions
+last 3 ChromeAndroid versions
+last 3 Android versions
+last 3 FirefoxAndroid versions
+
+# Restrict min supported versions
+not Android < 66
+not Chrome < 66
+not ChromeAndroid < 66
+not Safari < 13
+not iOS < 13
+
+# Long dead browsers
+not Explorer <= 11
+not ExplorerMobile <= 11
+not OperaMini all  # Opera mini has very limited JS support, no canvas and no websockets
+not OperaMobile <= 12.1  # Opera mobile Presto

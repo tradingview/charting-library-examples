@@ -5,7 +5,6 @@ export default class MyDocument extends Document {
 		return (
 			<Html>
 				<Head>
-					<script src="/static/datafeeds/udf/dist/polyfills.js" />
 					<script src="/static/datafeeds/udf/dist/bundle.js" />
 				</Head>
 				<body>
