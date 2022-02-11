@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxtjs',
+    title: 'Charting Library nuxtjs Demo',
     htmlAttrs: {
       lang: 'en'
     },
@@ -14,7 +14,6 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: '/datafeeds/udf/dist/polyfills.js' },
       { src: '/datafeeds/udf/dist/bundle.js' }
     ]
   },
@@ -33,8 +32,6 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

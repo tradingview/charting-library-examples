@@ -31,7 +31,7 @@ export default {
       type: String
     },
     libraryPath: {
-      default: '/vendor/charting_library/',
+      default: '/charting_library/',
       type: String
     },
     chartsStorageUrl: {
@@ -70,7 +70,7 @@ export default {
       // BEWARE: no trailing slash is expected in feed URL
       datafeed: new window.Datafeeds.UDFCompatibleDatafeed(this.datafeedUrl),
       interval: this.interval,
-      container_id: this.containerId,
+      container: this.containerId,
       library_path: this.libraryPath,
 
       locale: getLanguageFromURL() || 'en',
@@ -90,26 +90,6 @@ export default {
     } = this
     const tvWidget = new Widget(widgetOptions)
     this.tvWidget = tvWidget
-
-    tvWidget.onChartReady(() => {
-      tvWidget.headerReady().then(() => {
-        const button = tvWidget.createButton()
-
-        button.setAttribute('title', 'Click to show a notification popup')
-        button.classList.add('apply-common-tooltip')
-
-        button.addEventListener('click', () => tvWidget.showNoticeDialog({
-          title: 'Notification',
-          body: 'TradingView Charting Library API works correctly',
-          callback: () => {
-            // eslint-disable-next-line no-console
-            console.log('Noticed!')
-          }
-        }))
-
-        button.innerHTML = 'Check API'
-      })
-    })
   },
   destroyed () {
     if (this.tvWidget !== null) {

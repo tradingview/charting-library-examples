@@ -1,4 +1,4 @@
-import { widget } from '~/static/vendor/charting_library'
+import { widget } from '~/static/charting_library'
 
 const Widget = widget
 
