@@ -7,12 +7,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "~12.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "next": "~12.2.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "license": "ISC",
   "devDependencies": {
-    "prettier": "^2.2.1"
+    "prettier": "^2.8.3"
   }
 }
