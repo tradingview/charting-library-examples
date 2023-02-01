@@ -1,6 +1,6 @@
 # TradingView Charting Library and nuxtjs Integration Example
 
-The earliest supported version of the charting library for these examples is `v20`.
+The earliest supported version of the charting library for these examples is `v23.043`.
 
 ## How to start
 
