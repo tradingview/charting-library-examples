@@ -19,8 +19,8 @@ remove_if_directory_exists "$LATEST_HASH"
 
 git clone -q --depth 1 -b "$BRANCH" $REPOSITORY "$LATEST_HASH"
 
-remove_if_directory_exists "app/src/main/assets/charting_library/charting_library"
+remove_if_directory_exists "app/src/main/assets/charting_library"
 
-cp -r "$LATEST_HASH/charting_library" "app/src/main/assets/charting_library/charting_library"
+cp -r "$LATEST_HASH" "app/src/main/assets/charting_library"
 
 remove_if_directory_exists "$LATEST_HASH"
