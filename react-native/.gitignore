@@ -60,3 +60,5 @@ buck-out/
 
 # Lock
 package-lock.json
+
+/ios/build/
