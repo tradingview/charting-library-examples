@@ -1,11 +1,11 @@
 # TradingView Charting Library Android Integration Example
 
-The earliest supported version of the charting library for these examples is `v20`.
+The earliest supported version of the charting library for these examples is `v23.043`.
 
 ## How to start
 
 1. Check that you can view https://github.com/tradingview/charting_library/. If you do not have access then you can [request access to this repository here](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/).
-1. Install dependencies `npm install`.
+1. Setup the development environment. [React Native Docs](https://reactnative.dev/docs/environment-setup)
 1. Copy the charting library files
 	1. If you are able to run bash scripts then the `copy_charting_library_files.sh` script can be used to copy the current stable version's files.
 	1. If you are not able to run bash scripts then do the following:
