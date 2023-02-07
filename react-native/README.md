@@ -25,3 +25,13 @@
    - Select all the files from the [charting_library repo](https://github.com/tradingview/charting_library/). This should include the `html` files, and the `charting_library` and `datafeeds` folders.
 5. Run `pod install` within the `ios` folder
 6. Run "npx react-native run-ios" to start installing the application to a device.
+
+## Troubleshooting
+
+If you have previously built an older version of this example in the same folder then you may need to clear out the old build files and artifacts. You can do this with the following command in your terminal (within the `react-native` folder):
+
+```shell
+git clean -fdxq .
+```
+
+This will remove all the untracked files in the folder.
