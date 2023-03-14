@@ -1,48 +1,18 @@
 {
-  "name": "vuejs",
-  "version": "0.1.0",
+  "name": "charting-library-vuejs2-example",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "~2.5.17"
+    "vite-plugin-vue2": "^2.0.3",
+    "vue": "^2.7.14"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.9.2",
-    "@vue/cli-plugin-eslint": "3.0.4",
-    "@vue/cli-service": "^3.9.3",
-    "babel-core": "6.26.3",
-    "babel-loader": "7.1.5",
-    "node-sass": "~4.12.0",
-    "sass-loader": "~7.1.0",
-    "style-loader": "~0.23.1",
-    "vue-template-compiler": "~2.5.17"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+    "vite": "^4.1.0"
+  }
 }
