@@ -1,4 +1,4 @@
-# TradingView Charting Library and Vue.js 2 Integration Example (TypeScript)
+# TradingView Charting Library and Vue.js 2 Integration Example
 
 ⚠️ Note: This example is for Vue 2.
 
