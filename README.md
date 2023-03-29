@@ -20,6 +20,14 @@ TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bit
 
 ### nextjs-javascript
 
+**Logic used inside that project is targetting nextjs up to v12**
+
+TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Next.js](https://nextjs.org/) Integration Example
+
+### nextjs
+
+**Logic used inside that project is targetting nextjs from v13**
+
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Next.js](https://nextjs.org/) Integration Example
 
 ### nuxtjs
