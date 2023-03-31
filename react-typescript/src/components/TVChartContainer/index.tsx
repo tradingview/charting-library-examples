@@ -1,12 +1,12 @@
-import * as React from 'react';
+import { useEffect, useRef } from 'react';
 import './index.css';
 import {
 	widget,
 	ChartingLibraryWidgetOptions,
 	LanguageCode,
-	IChartingLibraryWidget,
 	ResolutionString,
 } from '../../charting_library';
+import * as React from 'react';
 
 export interface ChartContainerProps {
 	symbol: ChartingLibraryWidgetOptions['symbol'];
@@ -25,17 +25,16 @@ export interface ChartContainerProps {
 	container: ChartingLibraryWidgetOptions['container'];
 }
 
-export interface ChartContainerState {
-}
-
-function getLanguageFromURL(): LanguageCode | null {
+const getLanguageFromURL = (): LanguageCode | null => {
 	const regex = new RegExp('[\\?&]lang=([^&#]*)');
 	const results = regex.exec(location.search);
 	return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, ' ')) as LanguageCode;
-}
+};
 
-export class TVChartContainer extends React.PureComponent<Partial<ChartContainerProps>, ChartContainerState> {
-	public static defaultProps: Omit<ChartContainerProps, 'container'> = {
+export const TVChartContainer = () => {
+	const chartContainerRef = useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
+
+	const defaultProps: Omit<ChartContainerProps, 'container'> = {
 		symbol: 'AAPL',
 		interval: 'D' as ResolutionString,
 		datafeedUrl: 'https://demo_feed.tradingview.com',
@@ -49,37 +48,29 @@ export class TVChartContainer extends React.PureComponent<Partial<ChartContainer
 		studiesOverrides: {},
 	};
 
-	private tvWidget: IChartingLibraryWidget | null = null;
-	private ref: React.RefObject<HTMLDivElement> = React.createRef();
-
-	public componentDidMount(): void {
-		if (!this.ref.current) {
-			return;
-		}
-
+	useEffect(() => {
 		const widgetOptions: ChartingLibraryWidgetOptions = {
-			symbol: this.props.symbol as string,
+			symbol: defaultProps.symbol as string,
 			// BEWARE: no trailing slash is expected in feed URL
 			// tslint:disable-next-line:no-any
-			datafeed: new (window as any).Datafeeds.UDFCompatibleDatafeed(this.props.datafeedUrl),
-			interval: this.props.interval as ChartingLibraryWidgetOptions['interval'],
-			container: this.ref.current,
-			library_path: this.props.libraryPath as string,
+			datafeed: new (window as any).Datafeeds.UDFCompatibleDatafeed(defaultProps.datafeedUrl),
+			interval: defaultProps.interval as ChartingLibraryWidgetOptions['interval'],
+			container: chartContainerRef.current,
+			library_path: defaultProps.libraryPath as string,
 
 			locale: getLanguageFromURL() || 'en',
 			disabled_features: ['use_localstorage_for_settings'],
 			enabled_features: ['study_templates'],
-			charts_storage_url: this.props.chartsStorageUrl,
-			charts_storage_api_version: this.props.chartsStorageApiVersion,
-			client_id: this.props.clientId,
-			user_id: this.props.userId,
-			fullscreen: this.props.fullscreen,
-			autosize: this.props.autosize,
-			studies_overrides: this.props.studiesOverrides,
+			charts_storage_url: defaultProps.chartsStorageUrl,
+			charts_storage_api_version: defaultProps.chartsStorageApiVersion,
+			client_id: defaultProps.clientId,
+			user_id: defaultProps.userId,
+			fullscreen: defaultProps.fullscreen,
+			autosize: defaultProps.autosize,
+			studies_overrides: defaultProps.studiesOverrides,
 		};
 
 		const tvWidget = new widget(widgetOptions);
-		this.tvWidget = tvWidget;
 
 		tvWidget.onChartReady(() => {
 			tvWidget.headerReady().then(() => {
@@ -96,21 +87,16 @@ export class TVChartContainer extends React.PureComponent<Partial<ChartContainer
 				button.innerHTML = 'Check API';
 			});
 		});
-	}
 
-	public componentWillUnmount(): void {
-		if (this.tvWidget !== null) {
-			this.tvWidget.remove();
-			this.tvWidget = null;
-		}
-	}
+		return () => {
+			tvWidget.remove();
+		};
+	});
 
-	public render(): JSX.Element {
-		return (
-			<div
-				ref={ this.ref }
-				className={ 'TVChartContainer' }
-			/>
-		);
-	}
-}
+	return (
+		<div
+			ref={ chartContainerRef }
+			className={ 'TVChartContainer' }
+		/>
+	);
+};
