@@ -9,8 +9,8 @@ The earliest supported version of the charting library for these examples is `v2
 1. Copy the charting library files
     1. If you are able to run bash scripts then the `copy_charting_library_files.sh` script can be used to copy the current stable version's files.
     1. If you are not able to run bash scripts then do the following:
-        1. Copy the `charting_library` folder from <https://github.com/tradingview/charting_library/> to `/static` folder.
-        1. Copy the `datafeeds` folder from <https://github.com/tradingview/charting_library/> to `/static` folder.
+        1. Copy the `charting_library` folder from <https://github.com/tradingview/charting_library/> to `/public` folder.
+        1. Copy the `datafeeds` folder from <https://github.com/tradingview/charting_library/> to `/public` folder.
 1. Run `npm run dev`. It will build the project and open a default browser with the Charting Library.
 
 ## What is Charting Library
