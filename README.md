@@ -32,6 +32,14 @@ TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bit
 
 ### nuxtjs
 
+**Logic used inside that project is targetting nuxtjs up to v2.x**
+
+TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Nuxt.js](https://nuxtjs.org/) Integration Example
+
+### nuxtjs3
+
+**Logic used inside that project is targetting nuxtjs from v3.x**
+
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Nuxt.js](https://nuxtjs.org/) Integration Example
 
 ### react-javascript
