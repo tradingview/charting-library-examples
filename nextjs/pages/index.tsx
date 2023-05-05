@@ -37,7 +37,7 @@ export default function Home() {
       <Script
         src="/static/datafeeds/udf/dist/bundle.js"
         strategy="lazyOnload"
-        onLoad={() => {
+        onReady={() => {
           setIsScriptReady(true);
         }}
       />
