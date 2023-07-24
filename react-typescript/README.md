@@ -21,6 +21,3 @@ Charting Library is a standalone solution for displaying charts. This free, down
 
 React is a JavaScript library for building user interfaces. It is maintained by Facebook, Instagram and a community of individual developers and corporations.
 
-## About This Project
-
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
