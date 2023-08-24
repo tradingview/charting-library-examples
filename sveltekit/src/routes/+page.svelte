@@ -10,7 +10,8 @@
 <style>
   p {
     color: rgb(124, 89, 7);
-    font-family: "Comic Sans MS", cursive;
+    font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS", Roboto,
+      Ubuntu, sans-serif;
     font-size: 0.8em;
   }
 </style>

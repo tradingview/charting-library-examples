@@ -4,12 +4,7 @@ remove_if_directory_exists() {
 	if [ -d "$1" ]; then rm -Rf "$1"; fi
 }
 
-case "$1" in
-	"unstable")
-		BRANCH="unstable";;
-	*)
-		BRANCH="master";;
-esac
+BRANCH="master";
 
 REPOSITORY='https://github.com/tradingview/charting_library/'
 

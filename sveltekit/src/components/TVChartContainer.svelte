@@ -16,9 +16,16 @@
     const widgetOptions = {
       symbol: "AAPL",
       // BEWARE: no trailing slash is expected in feed URL
-      datafeed: new UDFCompatibleDatafeed("https://demo_feed.tradingview.com"),
+      datafeed: new UDFCompatibleDatafeed(
+        "https://demo_feed.tradingview.com",
+        undefined,
+        {
+          maxResponseLength: 1000,
+          expectedOrder: "latestFirst",
+        }
+      ),
       interval: "1H",
-      container: "TVChartContainer",
+      container: "tv-chart-container",
       library_path: "/charting_library/",
 
       locale: getLanguageFromURL() || "en",
@@ -37,5 +44,5 @@
 </script>
 
 <html>
-  <div id="TVChartContainer" />
+  <div id="tv-chart-container" />
 </html>
