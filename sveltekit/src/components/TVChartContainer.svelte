@@ -35,7 +35,7 @@
       charts_storage_api_version: "1.1",
       client_id: "tradingview.com",
       user_id: "public_user_id",
-      fullscreen: true,
+      fullscreen: false,
       autosize: true,
     };
 
@@ -43,6 +43,10 @@
   });
 </script>
 
-<html>
-  <div id="tv-chart-container" />
-</html>
+<div id="tv-chart-container" />
+
+<style>
+  #tv-chart-container {
+    height: calc(100vh - 50px);
+  }
+</style>

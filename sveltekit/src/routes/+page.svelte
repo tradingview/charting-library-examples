@@ -3,9 +3,10 @@
   import { version } from "$lib/charting_library";
 </script>
 
-<p>Library version: {version()}</p>
-
-<TvChartContainer />
+<div>
+  <p class="title">Library version: {version()}</p>
+  <TvChartContainer />
+</div>
 
 <style>
   p {
@@ -13,5 +14,9 @@
     font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS", Roboto,
       Ubuntu, sans-serif;
     font-size: 0.8em;
+  }
+
+  .title {
+    margin-left: 10px;
   }
 </style>
