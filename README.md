@@ -22,6 +22,10 @@ TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bit
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Angular 5](https://angular.io/) Integration Example
 
+### blazor-wasm
+
+TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Blazor](https://blazor.net/) [WebAssembly](https://docs.microsoft.com/en-gb/aspnet/core/blazor/hosting-models#blazor-webassembly) Integration Example
+
 ### ios-swift
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) integration into iOS WKWebView
