@@ -1,6 +1,30 @@
 import styles from "./index.module.css";
 import { useEffect, useRef } from "react";
-import { ChartingLibraryWidgetOptions, LanguageCode, ResolutionString, widget } from "@/public/static/charting_library";
+import { ChartingLibraryWidgetOptions, IBasicDataFeed, IDatafeedQuotesApi, LanguageCode, ResolutionString, widget } from "@/public/static/charting_library";
+
+// ideally move to window.d.ts
+// refer to documentation https://www.tradingview.com/charting-library-docs/latest/connecting_data/UDF/#constructor
+interface DatafeedsType {
+    UDFCompatibleDatafeed: new (
+        // This is a URL of a data server that will receive requests and return data.
+        datafeedURL: string,
+        updateFrequency?: number | undefined,
+        limitedServerResponse?:
+            | {
+            // Possible values: 'latestFirst' | 'earliestFirst'. If the server can't return all the required bars in a single response then expectedOrder specifies whether the server will send the latest (newest) or earliest (older) data first.
+            expectedOrder: 'latestFirst' | 'earliestFirst';
+            // Set this value to the maximum number of bars which the data backend server can supply in a single response. This doesn't affect or change the library behavior regarding how many bars it will request. It just allows this Datafeed implementation to correctly handle this situation.
+            maxResponseLength: number;
+        }
+            | undefined,
+    ) => IBasicDataFeed | (IBasicDataFeed & IDatafeedQuotesApi);
+}
+
+declare global {
+    interface Window {
+        Datafeeds: DatafeedsType;
+    }
+}
 
 export const TVChartContainer = (props: Partial<ChartingLibraryWidgetOptions>) => {
 	const chartContainerRef =
@@ -10,7 +34,7 @@ export const TVChartContainer = (props: Partial<ChartingLibraryWidgetOptions>) =
 		const widgetOptions: ChartingLibraryWidgetOptions = {
 			symbol: props.symbol,
 			// BEWARE: no trailing slash is expected in feed URL
-			datafeed: new (window as any).Datafeeds.UDFCompatibleDatafeed(
+			datafeed: new window.Datafeeds.UDFCompatibleDatafeed(
 				"https://demo_feed.tradingview.com",
 				undefined,
 				{
