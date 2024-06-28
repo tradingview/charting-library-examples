@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  iOS
 //
-//  Created by TradingView on 04.10.2018.
+//  Created by TradingView on 28.06.2024.
 //  Copyright © 2023 Example Inc. All rights reserved.
 //
 
@@ -14,10 +14,13 @@ class ViewController: UIViewController {
     private lazy var webView: WKWebView = {
         let configuration = WKWebViewConfiguration()
         configuration.preferences.setValue(true, forKey: "allowFileAccessFromFileURLs")
+        configuration.preferences.isElementFullscreenEnabled = true
         
         let webView = WKWebView(frame: .zero, configuration: configuration)
         webView.scrollView.contentInsetAdjustmentBehavior = .never
         webView.navigationDelegate = self
+        webView.uiDelegate = self
+        webView.isInspectable = true
         return webView
     }()
    
@@ -67,4 +70,20 @@ extension ViewController: WKNavigationDelegate {
     }
   }
    
+}
+
+extension ViewController: WKUIDelegate {
+    
+    func webView(
+        _ webView: WKWebView,
+        createWebViewWith configuration: WKWebViewConfiguration,
+        for navigationAction: WKNavigationAction,
+        windowFeatures: WKWindowFeatures
+    ) -> WKWebView? {
+        guard let url = navigationAction.request.url else { return nil }
+        let request = URLRequest.init(url: url)
+        webView.load(request)
+        return nil
+    }
+    
 }
