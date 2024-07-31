@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./public",
+    "src": "./public",
     "outDir": "build/dist",
     "module": "esnext",
     "target": "es5",
@@ -20,6 +20,7 @@
   "exclude": [
     "node_modules",
     "build",
-    "public"
+    "public",
+    "src/charting_library"
   ]
 }
