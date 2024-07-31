@@ -1,9 +1,6 @@
 # TradingView Charting Library and Sveltekit(Svelte) Integration Example
 
-**_The earliest supported version of the charting library for these examples is
-`v24`._**
-
-**_This example is for Sveltekit v.1.0 and Svelte v.4.0 and above_**
+The earliest supported version of the charting library for these examples is `v28.0.0`.
 
 ## How to start
 
