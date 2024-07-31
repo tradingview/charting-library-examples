@@ -1,6 +1,6 @@
 # TradingView Charting Library and Angular 5 Integration Example
 
-The earliest supported version of the charting library for these examples is `v23.043`.
+The earliest supported version of the charting library for these examples is `v28.0.0`.
 
 ## How to start
 
@@ -20,7 +20,3 @@ Charting Library is a standalone solution for displaying charts. This free, down
 ## What is Angular
 
 Angular is a platform that makes it easy to build applications with the web. Angular combines declarative templates, dependency injection, end to end tooling, and integrated best practices to solve development challenges. Angular empowers developers to build applications that live on the web, mobile, or the desktop. [Learn more](https://angular.io/docs).
-
-## About This Project
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
