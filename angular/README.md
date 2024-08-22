@@ -1,4 +1,4 @@
-# TradingView Charting Library and Angular 5 Integration Example
+# TradingView Charting Library and Angular Integration Example
 
 The earliest supported version of the charting library for these examples is `v28.0.0`.
 

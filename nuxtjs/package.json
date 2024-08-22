@@ -13,6 +13,6 @@
     "nuxt": "~2.18.1"
   },
   "devDependencies": {
-	  "vue-server-renderer": "2.7.16"
+    "vue-server-renderer": "2.7.16"
   }
 }
