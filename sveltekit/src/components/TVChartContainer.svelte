@@ -24,7 +24,7 @@
           expectedOrder: "latestFirst",
         }
       ),
-      interval: "1H",
+      interval: "1D",
       container: "tv-chart-container",
       library_path: "/charting_library/",
 

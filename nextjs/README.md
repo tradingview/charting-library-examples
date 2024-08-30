@@ -1,6 +1,6 @@
 # TradingView Charting Library and Nextjs Integration Example (JavaScript)
 
-The earliest supported version of the Charting Library for these examples is `v24.002`.
+The earliest supported version of the Charting Library for these examples is `v28.0.0`.
 
 **This example is intended to cover Nextjs from v13 onwards.**
 

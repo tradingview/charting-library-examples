@@ -2,8 +2,7 @@
 
 ⚠️ Note: This example is for Vue 2.
 
-The earliest supported version of the charting library for these examples is
-`v24`.
+The latest supported version of the charting library for these examples is `v28.0.0`.
 
 ## How to start
 

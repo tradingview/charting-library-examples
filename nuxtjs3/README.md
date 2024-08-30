@@ -1,6 +1,6 @@
 # TradingView Charting Library and Nuxt 3 Integration Example
 
-The earliest supported version of the charting library for these examples is `v24.003`.
+The latest supported version of the charting library for these examples is `v28.0.0`.
 
 ## How to start
 

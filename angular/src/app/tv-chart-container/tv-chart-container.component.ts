@@ -78,7 +78,7 @@ export class TvChartContainerComponent implements OnInit, OnDestroy {
     }
 
     @Input()
-    set containerId(containerId: ChartingLibraryWidgetOptions['container_id']) {
+    set containerId(containerId: ChartingLibraryWidgetOptions['container']) {
         this._containerId = containerId || this._containerId;
     }
 

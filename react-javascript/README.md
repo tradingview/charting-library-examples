@@ -1,6 +1,6 @@
 # TradingView Charting Library and React Integration Example (JavaScript)
 
-The earliest supported version of the charting library for these examples is `v23.043`.
+The latest supported version of the charting library for these examples is `v28.0.0`.
 
 ## How to start
 

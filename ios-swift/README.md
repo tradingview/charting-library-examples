@@ -1,6 +1,6 @@
 # TradingView Charting Library iOS (Swift version) Integration Example
 
-Latest tested version of the library with this example is `v27.006`.
+Latest tested version of the library with this example is `v28.0.0`.
 
 ## How to start
 

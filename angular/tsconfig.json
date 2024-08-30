@@ -23,6 +23,9 @@
       "dom"
     ]
   },
+  "exclude": [
+    "src/assets/**/*"
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

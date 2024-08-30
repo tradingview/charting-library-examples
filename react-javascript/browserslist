@@ -1,4 +1,5 @@
 # This is an rcfile for Browserslist (https://www.npmjs.com/package/browserslist)
+# These settings are used by Autoprefixer, babel-preset-env and other modules
 
 # All browsers with significant market share
 > 1% in US
@@ -17,12 +18,17 @@ last 3 ChromeAndroid versions
 last 3 Android versions
 last 3 FirefoxAndroid versions
 
+# iOS app special needs
+iOS >= 15
+
 # Restrict min supported versions
-not Android < 66
-not Chrome < 66
-not ChromeAndroid < 66
-not Safari < 13
-not iOS < 13
+not Android < 69
+not Chrome < 69
+not ChromeAndroid < 69
+not Safari < 15
+not iOS < 15
+not Firefox < 69
+not FirefoxAndroid < 69
 
 # Long dead browsers
 not Explorer <= 11
