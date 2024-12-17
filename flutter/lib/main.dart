@@ -19,18 +19,8 @@ class ChartingLibraryFlutterApp extends StatelessWidget {
   }
 }
 
-class LocalHtmlViewer extends StatefulWidget {
+class LocalHtmlViewer extends StatelessWidget {
   const LocalHtmlViewer({super.key});
-
-  @override
-  State<LocalHtmlViewer> createState() => _LocalHtmlViewerState();
-}
-
-class _LocalHtmlViewerState extends State<LocalHtmlViewer> {
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
