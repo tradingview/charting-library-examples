@@ -9,7 +9,7 @@ Charting Library is a standalone solution for displaying charts. This free, down
 ## What is this repository about
 This repository lists various libraries/frameworks commonly used with our libraries.
 
-⚠️ All of them would obviously require a granted access to the library. 
+⚠️ All of them would obviously require a granted access to the library.
 If you don't already have one, please check this [page][request-lib-url] and have a look at our [demo][demo-url] website in the meantime as well as at our [documentation website][doc-url].
 
 ## Content
@@ -73,6 +73,10 @@ TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bit
 ### vuejs 3
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Vue.js v3](https://vuejs.org/) Integration Example
+
+### ios-swift
+
+TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) integration into Flutter InAppWebView
 
 [demo-url]: https://trading-terminal.tradingview-widget.com/
 [doc-url]: https://www.tradingview.com/charting-library-docs/
