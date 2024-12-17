@@ -3,6 +3,10 @@
 
 This project demonstrates how to integrate the **TradingView Advanced Charts Library** into a Flutter application. It includes full support for the library's features, including drawing tools and advanced configurations.
 
+| Android|iOS|
+|---|---|
+|<img src="https://github.com/user-attachments/assets/b0e09ae8-faed-4cb8-8aa7-d10555b9508b" width="200"/> | <img src="https://github.com/user-attachments/assets/5bb2e711-6f8a-4afa-a110-74f98d3eab9a" width="200"/>|
+
 ⚠️ **Note:** This implementation currently works **only for Android and iOS platforms**.
 
 ---
