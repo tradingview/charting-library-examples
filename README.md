@@ -74,7 +74,7 @@ TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bit
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Vue.js v3](https://vuejs.org/) Integration Example
 
-### ios-swift
+### Flutter
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) integration into Flutter InAppWebView
 
