@@ -1,0 +1,16 @@
+{
+  "name": "charting-library-solid-typescript-example",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "solid-js": "^1.9.4",
+    "typescript": "~5.5.4",
+    "vite": "^6.0.11",
+    "vite-plugin-solid": "^2.11.0"
+  }
+}

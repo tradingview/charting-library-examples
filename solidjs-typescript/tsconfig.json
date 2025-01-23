@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "src": "./public",
+    "outDir": "build/dist",
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "types": [
+      "vite/client",
+      "node"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "public",
+    "src/charting_library"
+  ]
+}
