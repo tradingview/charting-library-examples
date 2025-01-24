@@ -17,12 +17,17 @@ last 3 ChromeAndroid versions
 last 3 Android versions
 last 3 FirefoxAndroid versions
 
+# iOS app special needs
+iOS >= 15
+
 # Restrict min supported versions
-not Android < 66
-not Chrome < 66
-not ChromeAndroid < 66
-not Safari < 13
-not iOS < 13
+not Android < 85
+not Chrome < 85
+not ChromeAndroid < 85
+not Safari < 15
+not iOS < 15
+not Firefox < 79
+not FirefoxAndroid < 79
 
 # Long dead browsers
 not Explorer <= 11
