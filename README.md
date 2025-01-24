@@ -74,6 +74,10 @@ TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bit
 
 TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Vue.js v3](https://vuejs.org/) Integration Example
 
+### Solid.js-typescript
+
+TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/) and [Solid.js](https://www.solidjs.com/) Integration Example
+
 [demo-url]: https://trading-terminal.tradingview-widget.com/
 [doc-url]: https://www.tradingview.com/charting-library-docs/
 [tutorial-url]: https://github.com/tradingview/charting-library-tutorial
