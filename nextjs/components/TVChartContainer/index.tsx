@@ -3,8 +3,7 @@ import { useEffect, useRef } from "react";
 import { ChartingLibraryWidgetOptions, LanguageCode, ResolutionString, widget } from "@/public/static/charting_library";
 
 export const TVChartContainer = (props: Partial<ChartingLibraryWidgetOptions>) => {
-	const chartContainerRef =
-		useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>;
+	cconst chartContainerRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		const widgetOptions: ChartingLibraryWidgetOptions = {
@@ -19,7 +18,7 @@ export const TVChartContainer = (props: Partial<ChartingLibraryWidgetOptions>) =
 				}
 			),
 			interval: props.interval as ResolutionString,
-			container: chartContainerRef.current,
+			container: chartContainerRef.current as HTMLElement,
 			library_path: props.library_path,
 			locale: props.locale as LanguageCode,
 			disabled_features: ["use_localstorage_for_settings"],
