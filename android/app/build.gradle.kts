@@ -1,15 +1,15 @@
 plugins {
-    id("com.android.application")
-    id("kotlin-android")
+    alias(libs.plugins.android)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
     namespace = "com.tradingview.android"
-    compileSdk = 36
+    compileSdk = libs.versions.sdk.compile.get().toInt()
     defaultConfig {
         applicationId = "com.tradingview.android"
-        minSdk = 21
-        targetSdk = 36
+        minSdk = libs.versions.sdk.min.get().toInt()
+        targetSdk = libs.versions.sdk.compile.get().toInt()
         versionCode = 1
         versionName = "1.0"
     }
@@ -26,6 +26,6 @@ android {
 }
 
 dependencies {
-    implementation("androidx.appcompat:appcompat:1.7.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.2.1")
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.constraintlayout)
 }
