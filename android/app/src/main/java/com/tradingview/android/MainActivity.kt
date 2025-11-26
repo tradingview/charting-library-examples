@@ -4,16 +4,24 @@ import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
+import com.tradingview.android.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         initWebView()
     }
 
     private fun initWebView() {
-        val webView = WebView(this)
+        val webView = binding.webview
         webView.settings.javaScriptEnabled = true
         webView.settings.allowFileAccessFromFileURLs = true
 
@@ -33,7 +41,8 @@ class MainActivity : AppCompatActivity() {
                     return
                 }
 
-                webView.evaluateJavascript("""
+                webView.evaluateJavascript(
+                    """
                     tvWidget.onChartReady(function() {
                         tvWidget.chart().onIntervalChanged().subscribe(
                             null,
@@ -42,7 +51,8 @@ class MainActivity : AppCompatActivity() {
                             }
                         );
                     });
-                """) {
+                """
+                ) {
                     // do nothing
                 }
             }
@@ -51,7 +61,19 @@ class MainActivity : AppCompatActivity() {
         // uncomment next line if you want to debug WebView in Chrome DevTools
         // WebView.setWebContentsDebuggingEnabled(true)
 
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.mandatorySystemGestures())
+
+            view.updatePadding(
+                left = systemBars.left,
+                right = systemBars.right,
+                top = systemBars.top,
+                bottom = systemBars.bottom,
+            )
+
+            insets
+        }
+
         webView.loadUrl(chartingLibraryUrl)
-        setContentView(webView)
     }
 }
