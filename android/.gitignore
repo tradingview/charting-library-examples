@@ -9,3 +9,4 @@
 /captures
 .externalNativeBuild
 app/src/main/assets/charting_library/
+.idea
