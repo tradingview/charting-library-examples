@@ -6,8 +6,12 @@
 	background-color: #222;
 	color: #fff;
 	font-family: Arial, Helvetica, sans-serif;
+	height: 75px;
+	max-height: 75px;
+	font-size: 11px;
+	overflow-wrap: break-word;
 }
 
 .TVChartContainer {
-	height: calc(100vh - 80px);
+	height: calc(100vh - 75px);
 }
