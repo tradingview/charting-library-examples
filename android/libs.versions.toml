@@ -1,0 +1,21 @@
+[versions]
+
+sdk-min = "21"
+sdk-compile = "36"
+
+android-gradle = "8.13.0"
+kotlin = "2.2.21"
+
+appcompat = "1.7.1"
+constraintlayout = "2.2.1"
+
+
+[libraries]
+
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+
+[plugins]
+
+android = { id = "com.android.application", version.ref = "android-gradle" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
