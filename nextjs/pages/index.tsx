@@ -13,6 +13,8 @@ const defaultWidgetProps: Partial<ChartingLibraryWidgetOptions> = {
   interval: "1D" as ResolutionString,
   library_path: "/static/charting_library/",
   locale: "en",
+  // Demo storage for testing only: anything saved there is public and can be read, modified or deleted by anyone.
+  // For production, use your own storage, e.g. https://github.com/tradingview/saveload_backend
   charts_storage_url: "https://saveload.tradingview.com",
   charts_storage_api_version: "1.1",
   client_id: "tradingview.com",
