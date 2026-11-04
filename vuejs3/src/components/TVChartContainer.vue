@@ -29,6 +29,8 @@ const props = defineProps({
 		type: String,
 	},
 	chartsStorageUrl: {
+		// Demo storage for testing only: anything saved there is public and can be read, modified or deleted by anyone.
+		// For production, use your own storage, e.g. https://github.com/tradingview/saveload_backend
 		default: 'https://saveload.tradingview.com',
 		type: String,
 	},
