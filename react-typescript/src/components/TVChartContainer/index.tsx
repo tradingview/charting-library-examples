@@ -39,6 +39,8 @@ export const TVChartContainer = () => {
 		interval: 'D' as ResolutionString,
 		datafeedUrl: 'https://demo_feed.tradingview.com',
 		libraryPath: '/charting_library/',
+		// Demo storage for testing only: anything saved there is public and can be read, modified or deleted by anyone.
+		// For production, use your own storage, e.g. https://github.com/tradingview/saveload_backend
 		chartsStorageUrl: 'https://saveload.tradingview.com',
 		chartsStorageApiVersion: '1.1',
 		clientId: 'tradingview.com',

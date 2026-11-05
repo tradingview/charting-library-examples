@@ -12,6 +12,12 @@ This repository lists various libraries/frameworks commonly used with our librar
 ⚠️ All of them would obviously require a granted access to the library. 
 If you don't already have one, please check this [page][request-lib-url] and have a look at our [demo][demo-url] website in the meantime as well as at our [documentation website][doc-url].
 
+### Saving and loading charts
+
+⚠️ The examples save chart layouts and templates to `https://saveload.tradingview.com`. This is a public demo storage for testing only: anything saved there can be read, modified or deleted by anyone, and may be wiped at any time.
+
+Do not use it in production. Set `charts_storage_url` to your own storage instead, for example based on [saveload_backend][saveload-backend-url], and protect it with your own authentication.
+
 ## Content
 
 ### android
@@ -83,4 +89,5 @@ TradingView [Charting Library](https://www.tradingview.com/HTML5-stock-forex-bit
 [tutorial-url]: https://github.com/tradingview/charting-library-tutorial
 [discord-url]: https://discord.gg/UC7cGkvn4U
 [request-lib-url]: https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/
+[saveload-backend-url]: https://github.com/tradingview/saveload_backend
 
