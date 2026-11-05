@@ -1,0 +1,13 @@
+﻿@inject IJSRuntime JSRuntime
+
+<div id="tv_chart_container" class="TradingViewChart"></div>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeAsync<object>("tradingViewChartWrapper.initialize");
+        }
+    }
+}
